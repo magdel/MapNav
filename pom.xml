@@ -8,17 +8,11 @@
     <groupId>ru.netradar</groupId>
     <artifactId>mapnav-midlet</artifactId>
     <name>MapNav</name>
-<version>4.8.17</version>
+<version>4.8.18</version>
 
     <description>midlet project</description>
-                    
+
       <dependencies>
-<!--         <dependency>
-            <groupId>org.microemu</groupId>
-            <artifactId>microemulator</artifactId>
-            <scope>provided</scope>
-            <version>2.0.3</version>
-        </dependency> -->
 
         <dependency>
             <groupId>come.sun.wtk</groupId>
@@ -84,7 +78,7 @@
             <scope>system</scope>
             <systemPath>${basedir}/WTK/lib/nokiaext.jar</systemPath>
         </dependency>
-            
+
     </dependencies>
 
     <properties>
@@ -93,7 +87,7 @@
         <wtk.home>${basedir}/WTK</wtk.home>
         <j2me.midlet.vendor>Pavel Raev</j2me.midlet.vendor>
         <j2me.midlet.name>MapNav</j2me.midlet.name>
-        <j2me.midlet.version>4.8.17</j2me.midlet.version>
+        <j2me.midlet.version>${version}</j2me.midlet.version>
         <j2me.midlet.configuration>CLDC-1.1</j2me.midlet.configuration>
         <j2me.midlet.profile>MIDP-2.0</j2me.midlet.profile>
 
@@ -152,17 +146,14 @@
                         <MicroEdition-Profile>${j2me.midlet.profile}</MicroEdition-Profile>
                         <MicroEdition-Configuration>${j2me.midlet.configuration}</MicroEdition-Configuration>
                         <MIDlet-Vendor>${j2me.midlet.vendor}</MIDlet-Vendor>
-<MIDlet-Description>GPS navigation with YOUR MAP in your mobile phone</MIDlet-Description>
-<MIDlet-Info-URL>http://mapnav.spb.ru</MIDlet-Info-URL>
-
-<MIDlet-Permissions>javax.microedition.io.Connector.sms, javax.wireless.messaging.sms.send, javax.wireless.messaging.sms.receive, javax.microedition.io.Connector.http, javax.microedition.io.PushRegistry</MIDlet-Permissions>
-
-<MIDlet-Permissions-Opt>javax.microedition.io.Connector.bluetooth.client, javax.microedition.io.Connector.file.read, javax.microedition.io.Connector.file.write, javax.microedition.io.Connector.mms, javax.wireless.messaging.mms.send, javax.microedition.io.Connector.socket, javax.microedition.location.Location, javax.microedition.media.control.VideoControl.getSnapshot, javax.microedition.media.control.RecordControl, javax.microedition.io.Connector.datagram</MIDlet-Permissions-Opt>
-
-<MIDlet-Push-1>sms://:24789,app.MapMidlet,*</MIDlet-Push-1>
-<Nokia-MIDlet-No-Exit>true</Nokia-MIDlet-No-Exit>
-<SEMC-StandbyApplication>Y</SEMC-StandbyApplication>
-<SMS-Port>24789</SMS-Port>
+                        <MIDlet-Description>GPS navigation with YOUR MAP in your mobile phone</MIDlet-Description>
+                        <MIDlet-Info-URL>http://mapnav.spb.ru</MIDlet-Info-URL>
+                        <MIDlet-Permissions>javax.microedition.io.Connector.sms, javax.wireless.messaging.sms.send, javax.wireless.messaging.sms.receive, javax.microedition.io.Connector.http, javax.microedition.io.PushRegistry</MIDlet-Permissions>
+                        <MIDlet-Permissions-Opt>javax.microedition.io.Connector.bluetooth.client, javax.microedition.io.Connector.file.read, javax.microedition.io.Connector.file.write, javax.microedition.io.Connector.mms, javax.wireless.messaging.mms.send, javax.microedition.io.Connector.socket, javax.microedition.location.Location, javax.microedition.media.control.VideoControl.getSnapshot, javax.microedition.media.control.RecordControl, javax.microedition.io.Connector.datagram</MIDlet-Permissions-Opt>
+                        <MIDlet-Push-1>sms://:24789,app.MapMidlet,*</MIDlet-Push-1>
+                        <Nokia-MIDlet-No-Exit>true</Nokia-MIDlet-No-Exit>
+                        <SEMC-StandbyApplication>Y</SEMC-StandbyApplication>
+                        <SMS-Port>24789</SMS-Port>
                     </jadAttributes>
 
 
@@ -186,32 +177,17 @@
                             <MicroEdition-Configuration>${j2me.midlet.configuration}</MicroEdition-Configuration>
                             <MicroEdition-Profile>${j2me.midlet.profile}</MicroEdition-Profile>
                             <MIDlet-Description>GPS navigation with YOUR MAP in your mobile phone</MIDlet-Description>
-<MIDlet-Info-URL>http://mapnav.spb.ru</MIDlet-Info-URL>
-
-<MIDlet-Permissions>javax.microedition.io.Connector.sms, javax.wireless.messaging.sms.send, javax.wireless.messaging.sms.receive, javax.microedition.io.Connector.http, javax.microedition.io.PushRegistry</MIDlet-Permissions>
-
-<MIDlet-Permissions-Opt>javax.microedition.io.Connector.bluetooth.client, javax.microedition.io.Connector.file.read, javax.microedition.io.Connector.file.write, javax.microedition.io.Connector.mms, javax.wireless.messaging.mms.send, javax.microedition.io.Connector.socket, javax.microedition.location.Location, javax.microedition.media.control.VideoControl.getSnapshot, javax.microedition.media.control.RecordControl, javax.microedition.io.Connector.datagram</MIDlet-Permissions-Opt>
-
-<MIDlet-Push-1>sms://:24789,app.MapMidlet,*</MIDlet-Push-1>
-<Nokia-MIDlet-No-Exit>true</Nokia-MIDlet-No-Exit>
-<SEMC-StandbyApplication>Y</SEMC-StandbyApplication>
-<SMS-Port>24789</SMS-Port>
+                            <MIDlet-Info-URL>http://mapnav.spb.ru</MIDlet-Info-URL>
+                            <MIDlet-Permissions>javax.microedition.io.Connector.sms, javax.wireless.messaging.sms.send, javax.wireless.messaging.sms.receive, javax.microedition.io.Connector.http, javax.microedition.io.PushRegistry</MIDlet-Permissions>
+                            <MIDlet-Permissions-Opt>javax.microedition.io.Connector.bluetooth.client, javax.microedition.io.Connector.file.read, javax.microedition.io.Connector.file.write, javax.microedition.io.Connector.mms, javax.wireless.messaging.mms.send, javax.microedition.io.Connector.socket, javax.microedition.location.Location, javax.microedition.media.control.VideoControl.getSnapshot, javax.microedition.media.control.RecordControl, javax.microedition.io.Connector.datagram</MIDlet-Permissions-Opt>
+                            <MIDlet-Push-1>sms://:24789,app.MapMidlet,*</MIDlet-Push-1>
+                            <Nokia-MIDlet-No-Exit>true</Nokia-MIDlet-No-Exit>
+                            <SEMC-StandbyApplication>Y</SEMC-StandbyApplication>
+                            <SMS-Port>24789</SMS-Port>
                         </manifestEntries>
                     </archive>
                     <!-- -->
-                    
-                   <!--  <libs>
-                        <lib>${settings.localRepository}/org/microemu/cldcapi11/2.0.4/cldcapi11-2.0.4.jar</lib>
-                        <lib>${settings.localRepository}/org/microemu/midpapi20/2.0.4/midpapi20-2.0.4.jar</lib>
-                    </libs> -->
 
-                    <!-- <dependencies>
-                        <dependency>
-                            <groupId>org.microemu</groupId>
-                            <artifactId>microemulator</artifactId>
-                            <exclude>true</exclude>
-                        </dependency>
-                    </dependencies> -->
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -220,30 +196,10 @@
                         <version>4.4</version>
                         <scope>runtime</scope>
                     </dependency>
-                    
-                    <!-- <dependency>
-                        <groupId>org.microemu</groupId>
-                        <artifactId>cldcapi11</artifactId>
-                        <version>2.0.4</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.microemu</groupId>
-                        <artifactId>midpapi20</artifactId>
-                        <version>2.0.4</version>
-                    </dependency> -->
+
                 </dependencies>
             </plugin>
 
-            <!--
-            <plugin>
-                <groupId>com.pyx4me</groupId>
-                <artifactId>gammu-maven-plugin</artifactId>
-                <version>${version}</version>
-                <configuration>
-                    <gammurc>${basedir}/gammurc</gammurc>
-                </configuration>
-            </plugin>
-            -->
 
             <!-- Configure Eclipse-Me -->
             <plugin>
@@ -281,43 +237,6 @@
                          <goals>
                             <goal>attached</goal>
                         </goals>
-                    </execution>
-                </executions>
-            </plugin>
-
-            <!-- install jar in project site -->
-            <plugin>
-                <artifactId>maven-antrun-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>site-copy-artifacts</id>
-                        <phase>site</phase>
-                        <goals>
-                            <goal>run</goal>
-                        </goals>
-                        <configuration>
-                            <tasks>
-                                <copy overwrite="true"
-                                      file="${project.build.directory}/${project.build.finalName}-me.jar"
-                                      tofile="${project.build.directory}/site/${artifactId}.jar"/>
-                                <copy overwrite="true"
-                                      file="${project.build.directory}/${project.build.finalName}-me.jad"
-                                      tofile="${project.build.directory}/site/${artifactId}.jad"/>
-                                <replace value="http://pyx4me.com/snapshot/pyx4me/midlet-example/${artifactId}.jar" token="${project.build.finalName}-me.jar"
-                                         dir="${project.build.directory}/site">
-                                    <include name="${artifactId}.jad"></include>
-                                </replace>
-
-                                <!-- this is not part of the example, remove it when project used as template -->
-                                <copy overwrite="true"
-                                      file="${project.build.directory}/${project.build.finalName}-src.zip"
-                                      tofile="${project.build.directory}/site/${project.build.finalName}-src.zip"/>
-                                <copy overwrite="true"
-                                      file="${project.build.directory}/${project.build.finalName}-src.tar.gz"
-                                      tofile="${project.build.directory}/site/${project.build.finalName}-src.tar.gz"/>
-
-                            </tasks>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
