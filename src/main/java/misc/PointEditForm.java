@@ -68,6 +68,7 @@ public class PointEditForm extends Form implements CommandListener, Runnable,Pro
     append(textLat);
     textLon=new TextField(LangHolder.getString(Lang.longitude),null,12,TextField.NON_PREDICTIVE);
     append(textLon);
+    //!NO-NUMERIC
     textAlt=new TextField(LangHolder.getString(Lang.altitude),null,6,TextField.ANY|TextField.NON_PREDICTIVE);
     append(textAlt);
     

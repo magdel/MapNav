@@ -1,0 +1,980 @@
+Version 4.8.18: 23:09 04.09.2018
+[*]Project source at Github
+[+] Removed MobileZoo library
+[-] Removed numeric fields attributes because of some phone bug not to be able delete entered text in such fields
+[-] Fixed Netradar user list
+
+Version 4.8.16 (Debug): 20:56 13.07.2011
+[+] Turn off track display in quick menu View
+[-] Normalized sunrise/sunset time
+[-] Constant add track point sound
+
+Version 4.8.15 (Debug): 0:55 12.07.2011
+[+] Netradar real-time mode can send data over UDP
+[-] Incorrect sunrise/sunset time
+[-] Blinking map, black tilea with some phones
+
+Version 4.8.14 (Debug): 23:33 03.05.2011
+[-] Autoselect next waypoint in route (including found one)
+
+Version 4.8.13 (Debug): 23:34 06.04.2011
+[+] Found route from KML may be converted to Route and then exported or edited
+[-] GMT cache incorrect store
+
+Version 4.8.11 (Debug): 23:58 01.03.2011
+[+] Cache format now is GMT
+[+] Instead of broken Gurtam now map MapQuest OSM
+[+] Disablable bluetooth connection monitoring for slow or unpredictabe GPS BT receivers
+
+Version 4.8.10 (Debug): 0:00 04.02.2011
+[+] Debug version writes ext location info to log
+[+] Colors dublicated with names in Settings
+[-] Autorouting with route from Google
+
+Version 4.8.9 (Debug): 17:10 30.11.2010
+[*] "Default track" is limited only by common Max trackpoints to start new (by default 3000)
+
+[+] Trackpoint info by small font, trackpoint highlight
+[-] Track send by OBEX fail with disconnect
+[-] Search BT never ends
+[-] Disconnect on new BT devices
+
+Version 4.8.5 (Debug): 0:11 14.11.2010
+[*] Display trackpoint time when center at it
+[+] Internal GPS one second refresh
+
+Version 4.8.4 (Debug): 21:17 14.10.2010
+[+] Netradar real time is more stable
+[+] Internal GPS displays satellites (if possible)
+[-] Internal GPS starts slow
+
+Version 4.8.3 (Debug): 13:20 20.08.2010
+[+] Route search with CloudMade (see Settings - Geo Info)
+
+Version 4.8.2 (Debug): 23:47 17.08.2010
+[+] Buttons for pointer disappear
+[-] Fixing GT Mode
+
+Version 4.8.1 (Debug): 14:19 15.08.2010
+[+] Track renaming
+[-] More accurate GT Mode
+
+Version 4.8.0 (Release): 
+22:40 23.02.2010
+
+
+[+] Stable tile download
+[-] Map tiles on screen reload
+
+Version 4.7.23 (Prerelease): 
+20:51 15.12.2009
+
+[*] Displays sunrise/sunset time for specified point on Earth in Information screen
+[+] DateTime added to SMS text
+[-] Wrong offset calc from route
+
+Version 4.7.21 (Debug): 18:12 22.11.2009
+[*] Sport Mode - auto calc lap time and distance with round run
+[+] More optimized GPX expoert
+[+] Acknowledge to leave GT or Sport Modes
+[+] Added options for track record by distance and time (250m, 2km, 2min)
+
+Version 4.7.20 (Debug): 20:52 19.10.2009
+[+] Optimized track export to GPX 
+[-] Track export does not display result alert
+
+Version 4.7.19 (Debug): 20:03 15.10.2009
+[+] Autobackup track now displays error message if enabled in Settings - Debug
+[+] MapNavLite support autobackup too
+Autobackup track still need you to export track!
+
+Version 4.7.18 (Debug): 21:06 14.10.2009
+* Record voice for Marks. Before update export your Marks.
+* Autobackup track to file in Work path. Enables in Settings-Track. In case of backup error track points count displayed on red background
+
+Version 4.7.16 (Debug): 22:46 08.09.2009
+[*] Tracking services now supported by netradar.ru only so register there for free to use tracking, track upload to inet and OSM, GT Results analysis and more. Login and password from netradar.ru required not from mapnav.spb.ru
+[*] Add screen Variometer. Displays altitude speed (in m/s only) and altitude (in m). 
+[*] Altitude speed above specified notifed with sounds. See Settings-Alerts
+[*] Screen Position shows UTC time from GPS with phone one together
+[+] Netradar object indicates time of last update when pointed at
+[+] Flickr registration right after entering token
+[+] More accurate calculation of acceleration and altitude speed
+[-] Compass display error with waypoints loaded with no active GPS
+
+Version 4.7.15 (Debug): 22:25 20.08.2009
+[*] Map name disappears in 5 sec after change
+[+] Disabable direction display in quick menu: * 1 5
+[+] Added language - Italian
+
+[+] Course and altitude displayed on map both
+[-] Import waypoints in GPX 1.1
+[-] Backlight Blink
+[-] Hanging connect BT GPS
+
+Version 4.7.14 (Debug): 20:12 30.06.2009
+[*] Export and import route/track in format GPX 1.1
+[+] More backlight support for Motorola and Samsung
+[+] Nokia's smartphones shouldn't kill the app with red button press
+[-] Export track in Ozi format with wrong coordinates (since 4.7.13)
+[-] Error on app exit (since 4.7.13)
+
+Version 4.7.13 (Debug): 22:05 22.06.2009
+[+] Backlight control for Motorola & LG
+[+] Network connection as NMEA source. Select type Socket and enter address like (host:port):127.0.0.1:5720
+[+] Turn direction at next waypoint
+[+] ETA are calculated with medium speed by 30 seconds
+[+] Progress display when downloading tiles, exporting tracks
+[+] Red backgound when "defualt track"is full
+[-] Quiet sound when speed limit exceeded
+[-] Wrong time in GPX track
+[-] Name in GT Mode may be in any language
+[-] Saving waypoints in win1251 produce file with empty coordinates
+
+Version 4.7.11 (Debug): 0:15 29.05.2009
+[*] Added two online maps with customizable url so you need to specify tile address type
+Type google map:[url]NumX&y=NumY&zoom=(18-Level),  for url like http://khm1.google.com/kh/v=38&hl=en&x=
+Type osm:	[url](Level-1)/NumX/NumY.png, for url like http://a.tah.openstreetmap.org/Tiles/tile/
+[-] GT Mode - confirm results with 5 press
+
+Version 4.7.10 (Debug): 23:06 18.05.2009
+[+] GT Mode - setting for result autosend to site
+[-] Setting for key - Refresh
+[-] Coordinate parse (like -00 10 30)
+[-] GT Mode - autoenable for raw GPS data
+
+Version 4.7.9 (Debug): 21:50 06.05.2009
+[+] Build with ProGuard 4.4 beta2
+[-] GT Mode - sound wuth Finish
+[-] Settings-Alerts: Test produce sound with selected volume
+
+Version 4.7.8 (Debug): 22:49 26.04.2009
+[*] GT Mode - acceleration mesurement by speed and distance, sending to site
+[*] TR-102 Mode - GlobalSat TR-102 emulation (no checksum yet)
+[+] Default track displays it points in magenta backgound
+[-] Some try to fix icon loss in waypoint editor
+
+Debug 4.7.6 (Debug): 18:33 23.02.2009
+[+] Scale display at range circles
+[+] Screen mode HSI fixed, line with arrow is always displaying current step course when wpt cursor showing direction to waypoint
+[+] Reinroduced routes/tracks storage. Incompatible with previous version, backup your data!
+[+] Route search from current gps location to specified on map wothout need for waypoint set
+[+] Settings - Alarms- waypoint approve: you may disable sound of waypoint autoselect and test current audio settings with Test (after Save)
+[-] kml parse error
+[-] route search display hangs when search error occur
+[-] Error turn on not setuped Netradar
+[-] Add waypoint in screen center, not in place of press
+[-] Hangs when start on Nokia 6800
+[-] Impossible to update file cache (now when clear on update is set in Settings-General)
+[-] Transparent cursor invisible on black background
+[-] text Lookup
+
+Version 4.7.0 (Release): 20:42 17.12.2008
+[+] Wikimapia takes info from descriptions not only names
+[-] Error on secondary enter to track Load
+
+Version 4.6.34 (Release Candidat 16): 23:43 03.12.2008
+[+] Added language - Czech
+[-] Permissions in manifest
+
+Version 4.6.33 (Release Candidat 15): 23:24 26.11.2008
+[+] Signed version
+
+Version 4.6.32 (Release Candidat 14): 23:07 25.11.2008
+[+] Displays info about last waypoint in route
+[+] Track display optimized after open
+[+] More full display for short routes (less 50 waypoints)
+
+Version 4.6.31 (Release Candidat 13): 16:25 15.11.2008
+[+] Distance to route end
+[+] Preview for image file before send to Flickr
+
+[-] Display coordinates in UTM
+
+
+Version 4.6.29 (Release Candidat 12): 22:45 11.11.2008
+[-] Faster startup
+[-] Show external map from list
+
+
+
+
+
+
+
+
+Version 4.6.27 (Release Candidat 11): 17:31 08.11.2008
+[-] Faster startup
+
+
+
+Version 4.6.26 (Release Candidat 10): 23:44 05.11.2008
+[-] Precise position works again
+[-] Field Search increased to 128 symbols
+
+
+
+
+
+
+
+Version 4.6.24 (Release Candidat 9): 16:09 31.10.2008
+[-] Track time takes milliseconds from sat
+
+
+Version 4.6.23 (Release Candidat 8): 0:07 29.10.2008
+[+] Track write takes satellite time
+[-] Fixed compass inversion
+
+
+
+Version 4.6.22 (Release Candidat 7): 1:20 17.10.2008
+[+] When use imperial units compass color inverted
+[-] Search now functioning in any language
+
+
+
+Version 4.6.21 (Debug): 0:02 11.10.2008
+[+] Possible to edit URL for OSM
+[-] WikiMapia
+
+
+Version 4.6.20 (Debug): 8:54 08.10.2008
+[*] Instant track send to OpenStreetMaps after send to site (WWW), login and password OSM enter at Settings-Netradar
+[+] Displays status icons at tracks (exported, send to WWW, OSM)
+[+] Track write period with 10 seconds
+[+] Search Route from current GPS position to specified on map
+[-] Select first BT device in list
+
+Version 4.6.19 (Debug): 0:58 02.10.2008
+
+[+] Disablable clock on map
+[-] Block download when already in cache
+[-] Map closes sms message with coordinates on autostart
+[-] Fixed Flickr for Nokia
+
+Version 4.6.18 (Release Candidat 6): 14:02 20.09.2008
+
+[+] Displays time on map
+[-] Error with empty waypoint name
+[-] Improved compability
+
+
+Version 4.6.17 (Release Candidat 5): 22:37 17.09.2008
+
+[*] Send route/track with Bluetooth (required OBEX suppport in JSR-82)
+[+] Saves waypoints display option within route
+[-] Phone hangs when changes map during its download
+
+
+Version 4.6.16 (Release Candidat 4): 22:37 02.09.2008
+[-] Load Ozi files in Win1251 encoding
+
+Version 4.6.15 (Release Candidat 3): 22:39 28.08.2008
+
+[+] NetRadar messages now shows new messages correctly
+[-] Timestamp only after 12 hour gpx track
+[-] Active waypoint is absent
+[-] Hangs when changes map and other map are downloading
+[-] Refreshed German translation
+[-] Refreshed Polish translation
+
+Version 4.6.13 (Release Candidat 2): 21:54 09.07.2008
+[*] Fully remade track/routes store in the application for quick display. Incompatible with previous version, export anything important before upgrade
+[*] New universal way to save/restore any data from the app
+[+] Settings are able to export/import (*.SET, binary format)
+[+] Marks are able to export/import (*.MARKS, XML format)
+[+] Speedometr changes digits color when close to warning one
+[+] Brightness of satellites depends on signal strength
+[+] Use internal cache with external
+[+] When track autosaves app settings are saved too
+[-] Block from map scroll when offline to online mode change
+[-] Caption with track/route name in menu
+[-] Map redraw after key hold
+[-] Changes from external map to online one shows external again
+[-] A class removed and a file from jar
+
+Version 4.6.12 (Release Candidat 1): 21:54 09.07.2008
+[*] Display double scaled map (quick menu View - 2x)
+[+] Addititional programming function - 2x
+
+[+] Select user map in list to view it
+[-] Huge memory leak in Night mode
+
+Version 4.6.11 (Debug): 23:36 05.07.2008
+
+[-] Fixed NetBeans migration in Send coordinates dialog
+
+Version 4.6.10 (Debug): 2:07 05.07.2008
+
+[+] Average speed on track profile by speed
+[+] Secure NetRadar authorization
+[-] Fixed NetBeans migration
+
+Version 4.6.9 (Debug): 0:44 04.07.2008
+
+* External map cache (Setting - Cache, ����� ��� � MapNavEditor)
+* Map coorection works nice for different map zoom
+* New key programing functions: Window and Scale
+* Setting for Netradar update period: 1 or 10 min
+* Quick menu select highlight
+* More useful display KML names (WikiMapia etc)
+* Fixed average speed calculation
+* Fixed track profile display
+* Com-port reading is faster
+
+* Build with NetBeans 6.1 & ProGuard, version 3.7
+
+Version 4.6.7 (Debug): 22:37 10.06.2008
+
+* Some optimization is made
+* Fixed waypoints display in Navigation list
+
+Version 4.6.6 (Debug): 23:35 05.06.2008
+
+* Fixed zoom change
+* Fixed WikiMapia initiating
+* Fixed Gurtam map
+
+Version 4.6.5 (Debug): 1:37 04.06.2008
+
+* Embedded maps (put in root of jar-file map.mno, it's autoopened , size no more then 1��)
+* Search Route from current location to selected waypoint (thanx Google)
+* Added information screen with altitude accumulation by track
+* When you move pointer is slided back to see more ahead
+* Now it's much easy to add waypoint with pointer (hold for 2 seconds in place on map)
+* Reload may download tiles again (Settings - Clear of reload)
+* Clear all tiles of current map (Service - ClearMap)
+* More accurate waypoint's name display
+* Displays traffic in real time
+* Fixed input of western longitude (Marks and waypoints)
+* Fixed route display
+
+Version 4.6.3 (Debug): 22:36 13.05.2008
+
+* Fixed routes and waypoints display
+
+Version 4.6.2 (Debug): 17:17 01.05.2008
+
+* Search by name
+* Inverse map (Settings - Keys, set for some key to use)
+* Track speed color is optional
+* Added language - French
+
+Version 4.6.1 (Release 2): 0:04 20.04.2008
+
+* Track display optimization on record
+* Fixed waypoints and routes editing
+* No sound symbol displays
+* Improved backup import
+
+Version 4.6.0 (Release): 1:13 13.04.2008
+
+* Extended GPX import from geocaching.com to show names
+
+Version 4.5.9 (Debug): 23:10 16.03.2008
+
+* My POI from GPS-Club.ru display its icons now, icons are cached
+* Fixed XML handle, so GPX and KML must be more stable on read
+* Fixed all track show
+
+Version 4.5.8 (Debug): 21:23 10.03.2008
+
+* Send voice messages of real time NetRadar (set command NR:Send Message in Settings - Keys. Records 4 seconds after beep
+* Sound volume may be adjusted
+* Disable track display restrictions when map rotate (Settings - Track)
+* When new map added its name is taken from file name by default
+
+Version 4.5.7 (Debug): 0:39 06.03.2008
+
+* You may send SMS to any phone or phone with MapNav running
+* Added language - Arabic
+* Added language - Hungarian
+* Distance in information screen is remembered and may be reset with key 0
+* Fixed Export all mode for tracks
+* Fixed key hold for 1,3,7,9
+* Fixed wikimapia
+* Fixed dialog Add external map
+
+Version 4.5.6 (Debug): 0:51 22.02.2008
+
+* NetRadar real time - version 2
+* Flickr has PhotoLog - continuous shot and send to flickr.com (I sent 90 shots within 50 minutes!)
+* In More... added item Donate MapNav
+
+Version 4.5.5 (Debug): 1:28 14.02.2008
+
+* Open geocaches desciption pages in embedded phone browser(in quick menu: * 3 7)
+* Settings - Track - Points to start new: number of points in track to save it and start new one(��-��������� ����� � 10000)
+* NetRadar show additional info for Artal devices
+* NetRadar real time mode is much smooth
+* Points count in track in track symbol 
+* New programming key fucntions: Scale 3x + and -, Map source/map (rotate all maps with one key)
+* Support for pointer on all screens not affected by GPS bind
+
+Version 4.5.4 (Debug): 2:29 08.02.2008
+
+* NetRadar in real-time! (Settings - Real-time). 
+* NetRadar shows user track (Setting - Show track)
+* Additional info screen NetRadar - traffic and update delay in real-time mode
+* Program exit confirmation
+* Trying to make connection with BT GPS even more stable
+
+Version 4.5.3 (Debug): 0:21 04.02.2008
+
+* Option to cache external map index (Setting - Maps)
+* Speed up with cache and internal maps
+* Redefinable keys (Settings - Keys)
+* Send NetRadar position without GPS (Settings - Keys: set some key Netradar function, that's it)
+* Write cross in track (Settings - Keys: set some key Track cross)(useful for OpenStreetMaps draw)
+* Join all Waypoints to one
+* Fixed speed exceed check
+* Fixed OpenStreetMaps maps caching
+
+Version 4.5.2 (Debug): 15:19 19.01.2008
+
+* Added language - Norwegian
+* Display data with imperial or nautical units (Settings - GeoInfo)
+* Long pointer press adds waypoint or mark
+* When waypoint or mark are added GPS coordinates used if GPS binded
+* Remake of marks list. Now with full support for touchscreen and marks may be edited
+* NetRadar message system makeup. Quick reply to any message* Sound alarm when speed exceed setting value (Settings - Alerts)
+* Track upload to site mapnav.spb.ru. Then it is available for online viewing and downloading (Track - Send WWW)
+
+Version 4.5.1 (Debug): 17:25 13.01.2008
+
+* Message exchange between NetRadar users. Select user and Send message
+* Support for osmrender layer in OpenStreetMaps, turn on in Settings-Maps. Layers changes with key # (here is my work  http://openstreetmap.org/?lat=60.7288&lon=28.8984&zoom=13&layers=0BFT)
+
+Version 4.5.0 (Release): 18:02 12.01.2008
+
+* Track colored with its speed
+* Marks are displayed in J2MeMap style (inspired us most)
+* Autoupdate online maps settings
+* Fixed distance and course calc when moving from other hemisphere
+* Fixed coordinate edition in format GG MM SS.S
+* Fixed route import GPX format
+* Fixed quick menu in landscape mode
+
+Version 4.4.13 (Release Candidat 5):
+
+* Fixed settings and cache import
+* Fixed export to GPX format
+
+Version 4.4.12 (Release Candidat 4): 14:17 23.12.2007
+
+* Support for HGE-100 (in Settings - GPS just set checkbox)
+* Added modes Preload and Plat for track (you may use it for download maps for all track)
+* In text screen you may scroll pages with pointer
+* Added language - Polish
+* Saves settings from GPS quick menu
+* Saves waypoints from geocaching.ru at quick menu (for latter use with GSM coverage)
+* Fixed application data import in Service menu
+
+Version 4.4.10 (Release Candidat 3): 0:43 12.12.2007
+
+* Fixed track lines move
+* Transparent panel under text on map may be adjusted (50%/30%)
+
+Version 4.4.9 (Release Candidat 2): 0:58 11.12.2007
+
+* More reliable NetRadar
+* Small fixes...
+
+Version 4.4.8 (Release Candidat 1): 21:28 26.11.2007
+
+* In Settings - Appearence you may check Opaque text for map (semitransparent panel is under text of shadow color)
+* Track display optimization
+* You may recommend MapNav by SMS: More - Recommend
+* Sony Ericsson HGE-100 GPS may be used with Settings - GPS - com-port:AT5;baud=9600 (com-port is always available now)
+* In Settings-General you may check to control light in keypad lock/unlock
+* Stylus press moves point to screen center (when not binded to GPS position) 
+* Send tracks/routes by IR
+* Availiable both OpenStreetMaps & Gurtam online maps (clear Internet cache before start use this version!)
+* UTM projection coordinates displays zone number and letter
+* Fix for Google map version
+* Fixed track display when map rotates
+* Fixed track autostart when it was first time started
+
+Version 4.4.7 (Debug): 21:44 18.11.2007
+
+* Added split view to 3 viewports
+* No screen captions displayed when in split view mode
+* Finished remake of Navigation menu for compability with phones with pointer
+* Fixed UTM coordinates calc for West hemisphere
+
+Version 4.4.6 (Debug): 1:00 16.11.2007
+
+* In menu Navigaton new form behavior of Tracks and Waypoints. For SE touchscreen compability (Routes in queue)
+* Add ability to split screen to two or four viewports with different screens. Active with quick menu View and setup with Appearance in Settings
+* New mark is added with name of date and time
+* Fixed zero coordinates with internal location (next try :-)
+* Fixes in screen Navigation - HSI
+
+Version 4.4.5 (Debug): 21:11 06.11.2007
+
+* Import routes/waypoints in GPX format
+* When maps rotates only nearest 20 waypoints displayed to prevent giant slowdown
+* Added language - Spanish
+* Screen Navigation has new view - HSI (Horizontal Situation Indicator)
+* Optimized localization system - twice less memory consumed
+* Fixed coordinates hemisphere display
+* Fixed active route/waypoints display in its lists
+
+Version 4.4.4 (Debug): 0:04 02.11.2007
+
+* Added language - Lithuanian
+* Saves selected waypoint and waypoints list position in screen Navigation
+* Added option for 250m in waypoints proximity radius
+* Fixed error in Settings from previuos version
+
+Version 4.4.3 (Debug): 0:38 31.10.2007
+
+* You may export all tracks/routes at once, folder with current date/time is created in specified path (ability to export on P990, P1)
+* New language support added - Slovak
+* In screen Navigation waypoints list may be scrolled with keys 1 and 3
+* New set in Settings - Appearance
+* More fast map scroll
+* Fixed track autoopen started in previous app run
+
+Version 4.4.2 (Debug): 22:46 25.10.2007
+
+* Some settings moved from General to Track
+* Fix for NetRadar quick menu
+* Fix in external maps list
+* Fixed internal location usage
+
+Version 4.4.1 (Debug): 22:46 25.10.2007
+
+* Gettagging with Flickr. Authorize MapNav by link http://www.flickr.com/auth-72157602577356052
+* Gettagging photos from the app or from phone files to Flickr
+* Active links in About and Flickr registration Flickr
+* Fixed connection to NetRadar
+* Backlight must be functioning on Siemens and Benq-Siemens
+
+Version 4.4.0 (Debug): 22:42 24.10.2007
+
+* When GPS is active and no active route present unbind from GPS position and you'll see distance between map position and actual GPS position
+* When GPS and routes active unbind from GPS position to see distance between waypoint and map position
+* Compass over map without rotation
+* In map mode "No" map rotates and no additional memory reqauired
+* Fixed Google Hybrid version
+* Changed order of maps in Settings, adjust for yourself again
+* Fixed calc of vertical speed
+* Fixed slowdown with keys using
+* Fixed some with internal location moving to 0,0
+* Simplifyed quick menu for compability
+* When app exits settings save success displayed
+* When keypad is unlocked light is turned on 50% 
+
+Version 4.3.8 (Debug): 18:55 20.10.2007
+
+* Refreshed quick menu, pointer support
+* Pointer now supported in quick menu, screen and landscape switch (bind to GPS position, point to center of any screen side - squares as screen divided 3x3)
+* More compatible internal map load method (for Siemens and others, enter correct path yourself just)
+* Autoselect waypoints in route not only to next but to nearest next too (Settings - Track)
+
+Version 4.3.7 (Debug): 21:28 16.10.2007
+
+* Smooth map scroll (Settings - Keys, may be turned off)
+* More precise track write on course change
+* Fixed display of transparent location pointer
+
+Version 4.3.5 (Debug): 23:39 14.10.2007
+
+* Unlimited try to reconnect BT GPS with connection error
+* Joystick press on information screen returns to screen Map
+
+Version 4.3.4 (Debug): 14:37 14.10.2007
+
+* Fixed screenshot when screen in landscape mode
+* Tracks and routes displays points count in itself
+* Tracks and routes displays active in list
+* Predefined marks
+* Location pointer can be transparent (Settings - General: Transparent pointer)
+* Coordinats foramt GG MM SS extended to GG MM SS.S
+* Displays left time to track autosave on information screen with track write parameters
+
+Version 4.3.3 (Debug): 12:56 05.10.2007
+
+* Quick menu has GPS item: quick track record pause and raw data display (for geocaching)
+* Progress form displays percent completed
+
+Version 4.3.2 (Debug): 21:46 04.10.2007
+
+* NMEA integrity check
+* Any number of internal maps can be loaded switched by key #
+* Saves Precise position as waypoint when route/waypoints is active
+* Settings - Alert: may turn on signal on new track point
+* Settings - General: may turn off cross in map center
+* TA (Time of Arrive) to waypoint (screen Navigation) now displayed local
+* Export to GPX & KML no needs a lot of memory
+
+Version 4.3.1 (Debug): 23:46 26.09.2007
+
+* In Navigation-Routes added menu item Reverse to reverse selected routes
+* Fixed direction definition to current step in route in screen Navigation
+* Satellites screen rotates when map rotate is active
+* More relaxed NMEA reading
+* Settings - Alerts: vibration may be turned off
+* Last waypoint does not autoselects to first one
+* More stable Fox hunter mode
+* Fixed current step direction in screen Navigation
+* Fixed adding track points on stop/continue move
+
+Version 4.3.0 (Debug): 1:18 21.09.2007
+
+* Recreated screen Navigation, keys 1 and 3 changes side offset display scale
+* More stable external maps
+* Track writing by course changing adds track points on stop/continue move
+
+Version 4.2.9 (Debug): 0:41 18.09.2007
+
+* Added information view System
+* Screens with many views show scroll bar
+* Screen Satellites displays satellite status in color
+* Fixed track profile display
+* Added vibration to sound when forced GPS reconnect happens
+
+Version 4.2.8 (Debug): 23:00 15.09.2007
+
+* Export waypoints and routes to GPX & KML (KML coordinates only)
+* Range rings
+* NetRadar caches track points when no connection is available
+* Browse for log path
+* Fixed altitude read from NMEA
+* Fixed read info about satellite constellar
+* Restored maps.google.com maps
+
+Version 4.2.7 (Debug): 1:36 10.09.2007
+
+* Many fixes
+* GPS autostart delay for 2 sec after app start
+* May use work path for browser quick open (Settings-General)
+* May move to external map center on its selection (Settings-Maps)
+
+Version 4.2.3 (Debug): 0:32 03.09.2007
+
+* External maps are to added in External Maps list. After adding they may be used rotates on screen with #  with custom maps view* Check for GPS data keep alive, restart connection on data delay
+* Map tiles should load in right order
+* Screen Satellites has two view: signal strength and satellite numbers
+* Screen Position has several views: HDOP,PDOP..., date and phone time
+* In Settings - General you may turn on visibilty of Minimize menu item in main menu
+* In Settings - Keys select what object add on 5 hold: waypoint or mark
+* In menu More... add item Service. There you may browse for dir and make full export of application (backup) or browse for backup and load it* Fixed quick connection fix with BT GPS (at SE)
+* Fixed acceleration calculation
+* Fixed coordinates output at Position screen
+
+Version 4.2.2 (Debug): 0:37 30.08.2007
+
+* Loads track OziExplorer format
+* Screen Satellites colors satellites used in position calculation
+* In Settings - Debug alerts for new debug versions may be activated
+
+Version 4.2.1 (Debug): 23:36 28.08.2007
+
+* Support for landscape mode (key 4)
+* Support WikiMapia
+* Track may be exported in GPX format
+* Significally track/route draw speed up
+* Updated NMEA parser
+* New screen - Satellites
+
+Version 4.2.0 (Release): 2:54 20.08.2007
+
+* Support for pointer (map server and type, screen mode, position bind changes)
+* Precise position calculates CEP90 also
+* View My POI desciption (*35 , geocache description view alike)
+* Joystick press changes track profile display
+
+Version 4.1.7 (Release candidat 17): 2:05 13.08.2007
+
+* Support for pointer (map scroll, scale change)
+* You may add waypoint relative to current position with azimuth and distance (hold 5)
+* Scrennshot in GIF, not olny BMP
+* Vibration on GPS connect lost
+* Screen Infomation has page with current track record params
+* Support maps from Ask.com
+* Support maps from OpenStreetMap.org
+* Support for My POI(poi.gps-club.ru), More...->My POI
+* Much less memory fragmentation
+* Fixed local time calc 
+
+Version 4.1.6 (Release candidat 16): 17:43 04.08.2007
+
+* Verbose app close
+* Much more effective localization
+* Delay update when scale changing
+* Fixed GeoCache info caching
+* Fixed file browser
+* Reset GPS data relaxation on satellite lost
+
+Version 4.1.4 (Release candidat 15): 23:38 16.07.2007
+
+* Screen Speedmeter has digital view
+* Screen of progress has Cancel menu
+* Bulgarian language added
+* Fixed waypoints/routes rename
+
+Version 4.1.3 (Release candidat 14): 15:47 13.07.2007
+
+* Acknowledge for changes save in route
+* Convert Marks to Waypoints (for export)
+
+Version 4.1.2 (Release candidat 13): 1:22 06.07.2007
+
+* More useful BT-device connecting (connects and adds to list)
+* Adds waypoint with 5 hold and asks for its name. Creates waypoints necessarily
+
+Version 4.1.1 (Release candidat 12): 1:24 04.07.2007
+
+* Displays coordinates in UTM and USSR TM
+* When SMS received maps are changed not only scale
+* Fixed route import
+
+Version 4.1.0 (Release candidat 11): 23:56 01.07.2007
+
+* Quick connects added BT-devices
+* When SMS received cached maps may be used
+* NetRadar saves five time more points with decreased traffic
+* External maps may be any size
+
+Version 4.0.6 (Release candidat 10): 0:17 24.06.2007
+
+* Fixes
+
+Version 4.0.5 (Release candidat 9): 1:04 22.06.2007
+
+* Ability to correct any maps (Settings-Debug)
+* Application optimization
+
+Version 4.0.3 (Release candidat 8): 2:48 20.06.2007
+
+* Caches info from GeoCaching.ru is cached in phone for next use without Internet access
+* Caches info is displayed full screen with scroll bar
+
+Version 4.0.2 (Release candidat 7): 10:17 19.06.2007
+
+* Stable game GeoCaching.ru (5 nearest caches), in quick menu for route you may read selected cache info (on map *,3,5)
+* Ukrainian language added
+* Fixed file browser
+
+Version 4.0.1 (Release candidat 6): 0:10 18.06.2007
+
+* Display maps from Google (not only surface and hybrid)
+* Setting for default track cleaning at startup
+
+Version 3.9.8 (Release candidat 5): 20:17 13.06.2007
+
+* External map supported!
+* Screen Track speed and elevation displays data by time (not only by distance)
+* Many quality fixes
+
+Version 3.9.5 (Release candidat 4): 21:14 20.05.2007
+
+* Screen Track elevation may show track speed (joystick left-right)
+* Fixed screen Navigation
+* Fatal error during app startup displayed in separate window
+
+Version 3.9.3 (Release candidat 3): 1:05 19.05.2007
+
+* Key 5 dublicates joystick press (key 5 hold still adds waypoint to active route)
+* Screen Navigation has second view
+
+Version 3.9.2 (Release candidat 2): 1:28 18.05.2007
+
+* Real coordinates on map with active GPS
+* Extended debug writes
+
+Version 3.9.1 (Release candidat 1): 15:04 13.05.2007
+
+* New screen - Navigation: position relative to route line, direction to waypoint, course, speed, altimeter, alt speed
+* New screen - GPS and track stats, use joystick left-right to scroll
+* Joystick scrolls screens up-down (if binded to GPS position, switch by joystick press)
+* Course values relaxation 
+* Key 6 changes screen backlight (SE(0% � 100%) and Nokia(0%,50%,100%), others must have support for Nokia UI API)
+* Selected waypoint stores after app exit
+* Track exports with its name
+* "Default track" displayed with yellow color
+* Fixed track name
+* Fixed GPS type selection
+
+Version 3.8.1 (Debug): 17:11 26.04.2007
+
+* Precise location mode
+* Use orthodrome instead of loxodrome
+
+Version 3.7.6 (Debug): 15:11 25.04.2007
+
+* Saves screenshot series
+* Saves list of last 3 used maps
+* Shows coordinates in datum Pulkovo-1942
+* Tracks are named yyyymmdd_hhnn
+* Light on 50%, not 100% only (for those phones with Nokia extensions support)
+
+Version 3.7.3 (Debug): 0:08 23.04.2007
+
+* Internal Location may be used (JSR179)
+* Waypoints and tracks transfer to routes and back
+* Add waypoint to active route with key 5 hold
+* Settings are now much faster but must be saved on each page as needed
+
+Version 3.6.1 (Debug): 10:13 18.04.2007
+
+* Create and edit wayponts and routes
+* Export waypoints and routes to OziExplorer file format
+* Information about last debug version in About form
+* Long operations show splash screen
+* Many other fixes and enhancements
+
+Version 3.5.2 (Debug): 20:17 14.04.2007
+
+* COM-port GPS may be used
+* Search for Bluetooth devices more stable
+* Fixed log save to site
+
+Version 3.5.1 (Debug): 22:24 09.04.2007
+
+* Display 2D/3D coordinates mode
+* Warning message when no enough free space to load custom map
+
+Version 3.4.0 (Release): 1:30 06.04.2007
+
+* Track autosave every 10 minutes
+* Support maps Yahoo.com
+* Latest version available inforamtion (About)
+
+Version 3.3.12 (Release candidat 7): 19:57 04.04.2007
+
+* Fixed Bluetooth GPS-receiver detection on some phones
+
+Version 3.3.8 (Release candidat 6): 1:53 01.04.2007
+
+* Fixed track point add with course change
+* Fized choose minimal distance for track record in 5 km
+* Fixed memory allocation for scaling when it was disabled
+
+Version 3.3.7 (Release candidat 5): 23:45 30.03.2007
+
+* Track points adds with course change (in turns)
+* Confirmation to delete all wayponts, routes, tracks
+* Fixed delete all tracks and waypoints
+* Fixed speedometer with active route and no active gps
+
+Version 3.3.6 (Release candidat 4): 1:47 27.03.2007
+
+* Backgound connection in NetRadar 
+* Compass over rotating map
+* Autoselect to next waypoint
+* TrackBack function 
+* Fixed course and distance calc to waypoint in compass screen
+
+Version 3.3.4 (Release candidat 3): 23:22 22.03.2007
+
+* Map rotates!
+* Autostart default track
+* More readable track lines
+
+Version 3.3.2 (Release candidat 2): 13:02 16.03.2007
+
+* Fixed file browser
+* Selection of used map servers
+* NetRadar user binding
+
+Version 3.3.0 (Release candidat 1): 2:01 12.03.2007
+
+* Fixed code page name for NetRadar
+* Fixed menu Exit losts
+* Log save to site
+
+Version 3.2.4 (Debug): 18:23 10.03.2007
+
+* Back to display track points
+* Back file browser work
+* Fixed russian text display in NetRadar
+* Autodetect necessary in-memory buffer size for current screen size
+
+Version 3.2.3 (Debug): 12:48 08.03.2007
+
+* Fixed reception SMS with active GPS
+* Autostart NetRadar
+* Saves mode Scale
+* Freeze compass when stops (<3 km/h)
+* Screen Travel 
+
+Version 3.2.2 (Debug): 18:03 04.03.2007
+
+* Ability to hand custom map correction (with Map Creator 1.6 and later)
+* Added coordinates format GG.GGGGG
+* Screen Location display local time based on time from GPS
+* FoxHunter mode
+* Specify folder to save log
+* Ability to take real screenshot to file
+
+Version 3.2.1 (Debug): 2:51 28.02.2007
+
+* NetRadar v1.0
+
+Version 3.2.0 (Debug): 2:51 28.02.2007
+
+* Much more quicker MapNav start
+* More stable BT GPS connection
+* Auto select russian language on first start
+* Autoconfirmation on Settings change
+* Caches from geocaching.ru of different types are displayed with different symbols
+
+Version 3.1.2 (Release): 2:40 25.02.2007
+
+* Fixed error with autosearch GPS-receiver
+
+Version 3.1.1 (Release Candidat 2): 1:03 24.02.2007
+
+* Fixed distance display to current waypoint in Compass and Speedometer screens
+* Speed, altitude and coordinates values relaxation
+* Reconnect GPS-receiver IO-error happens
+
+Version 3.1.0 (Release Candidat 1): 22:55 22.02.2007
+
+* ����� ���� ��������� �������� � GeoCaching.ru!
+* ���������� ����������� ������� - ����������� ���������
+* ��������������� ���������� GPS-��������� ��� ������� ���������
+* �������� ���������� ������ GPS-�������
+* ��������� ����� ���������� � ���������
+* ���� ��������� � ���� ������ � ������ ��������
+* ��������� ������� 4 ��������� ����� �������� SMS
+* ��������� ������� 6 ��������� ���������
+* ����� �������� SMS ������ ���� ��������� ��������� ��� �������� ������
+* ������������ SMS �������� ������� ��� �������� � ������, ������������ �����������
+* ���������� SMS � ������������ ����� ��������� ��� �����
+
+Version 3.0.5 (Debug): 0:15 19.02.2007:
+
+* ��������� ���������� ����������
+
+Version 3.0.4 (Debug):
+
+* ��������� ������� ����������
+* ��������� ����������� ���������� ���������� ���������� �������� *, ����� ���������� �������������� �������� ��������
+* ��� ����� ���������. ����������� � �����, ���� ��� ������ ��������� ��������
+
+Version 3.0.3 (Debug):
+
+* �������� ����� ������ ��� ��������� (������� �� ���������). ��� ���, � ���� � ��� ��������� ��������, ��������� ������
+
+Version 3.0.2 (Debug):
+
+* ����������� �������� ����������� �� ����� � ������ ����������
+
+Version 3.0.1 (Debug):
+
+* �������� �������������� ��� ������ ����� Bluetooth
+* ��������� �������� ����� ����. ������������ ����� ����� ������ �� ������� ��� ���������
+* ��� ������ ����� ��� ����� �������� ������� �������� �������
+* �������������� ���������� ������� ������ � ���������
+* ��������� ���������:��������� (������ ��������!),���������� ����������
+* ����� ����� - ���������� �����: ����������, ��. ��������,���������� �����,���. ��������
+* ����� ����� - ���������: ����������,��������,������,����
+* ����� ����� - ��������: ������� ��������,� ����� ����������� �� ��������� �����,�� ��������,���������� � ����� ��������
+* ������������ ������� ����������� ��������� 2 � 8 - ��������� � ����������.
+* ����������� ����� ����� �� ����� (��������� � ���������� ������ � ������� �����)
+* ���������� ����� ��� ���������� :-)

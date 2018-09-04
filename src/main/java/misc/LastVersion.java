@@ -45,11 +45,12 @@ public class LastVersion implements Runnable {
       String[] data_our=new String[3];
       String[] data_site=new String[3];
 
-      if (RMSOption.tellNewDebugVersion) {
-        s1=HTTPUtils.getHTTPContentAsString(MapUtil.homeSiteURL+"lastdeb.txt");
-      } else {
-        s1=HTTPUtils.getHTTPContentAsString(MapUtil.homeSiteURL+"lastver.txt");
-      }
+      //if (RMSOption.tellNewDebugVersion) {
+      //  s1=HTTPUtils.getHTTPContentAsString(MapUtil.homeSiteURL+"lastdeb.txt");
+      //} else {
+        //s1=HTTPUtils.getHTTPContentAsString(MapUtil.homeSiteURL+"lastver.txt");
+        s1=HTTPUtils.getHTTPContentAsString("https://raw.githubusercontent.com/magdel/MapNav/master/appconfig.txt");
+      //}
       if (!s1.equals(RMSOption.infoAboutLastVersion)) {
         if (!s1.equals(MapUtil.version)){
 

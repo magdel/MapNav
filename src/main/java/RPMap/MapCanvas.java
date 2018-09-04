@@ -6091,6 +6091,7 @@ public final class MapCanvas extends Canvas implements GeneralFeedback, CommandL
     textName=new TextField(LangHolder.getString(Lang.label),mp.name,30,TextField.ANY);
     wptForm.append(textName);
     textDist=new TextField(LangHolder.getString(Lang.distance)+", "+LangHolder.getString(Lang.m)+"\n","100",4,TextField.ANY);
+    //!NO NUMERIC
     textAzim=new TextField(LangHolder.getString(Lang.azimut)+", "+((char)0xb0)+"\n","90",3,TextField.ANY);
     Image[] ia = new Image[2];
     String[] sa= new String[2];

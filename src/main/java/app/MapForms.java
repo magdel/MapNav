@@ -1975,7 +1975,8 @@ public class MapForms implements GeneralFeedback, CommandListener, ItemCommandLi
     public TextField getTextMaxSpd() {
         if (textMaxSpd==null){
             // Insert pre-init code here
-            textMaxSpd=new TextField("Max "+LangHolder.getString(Lang.speed)+' '+'('+LangHolder.getString(Lang.kmh)+')', null, 6, TextField.DECIMAL);//GEN-LINE:|90-getter|1|90-postInit
+            //!NO DECIMAL
+            textMaxSpd=new TextField("Max "+LangHolder.getString(Lang.speed)+' '+'('+LangHolder.getString(Lang.kmh)+')', null, 6, TextField.ANY);//GEN-LINE:|90-getter|1|90-postInit
             // Insert post-init code here
         }
         return textMaxSpd;
@@ -1984,7 +1985,8 @@ public class MapForms implements GeneralFeedback, CommandListener, ItemCommandLi
     public TextField getTextMaxDsc() {
         if (textMaxDsc==null){
             // Insert pre-init code here
-            textMaxDsc=new TextField(LangHolder.getString(Lang.downwarnspeed), null, 4, TextField.DECIMAL);//GEN-LINE:|90-getter|1|90-postInit
+            //!NO DECIMAL
+            textMaxDsc=new TextField(LangHolder.getString(Lang.downwarnspeed), null, 4, TextField.ANY);//GEN-LINE:|90-getter|1|90-postInit
             // Insert post-init code here
         }
         return textMaxDsc;
@@ -1993,7 +1995,8 @@ public class MapForms implements GeneralFeedback, CommandListener, ItemCommandLi
     public TextField getTextMaxClm() {
         if (textMaxClm==null){
             // Insert pre-init code here
-            textMaxClm=new TextField(LangHolder.getString(Lang.upwarnspeed), null, 4, TextField.DECIMAL);//GEN-LINE:|90-getter|1|90-postInit
+            //!NO DECIMAL
+            textMaxClm=new TextField(LangHolder.getString(Lang.upwarnspeed), null, 4, TextField.ANY);//GEN-LINE:|90-getter|1|90-postInit
             // Insert post-init code here
         }
         return textMaxClm;
@@ -2756,6 +2759,7 @@ public class MapForms implements GeneralFeedback, CommandListener, ItemCommandLi
     public TextField getTextMaxTP() {
         if (textMaxTP==null){//GEN-END:|198-getter|0|198-preInit
             // Insert pre-init code here
+            //!NO-NUMERIC
             textMaxTP=new TextField(LangHolder.getString(Lang.points2startnew), null, 5, TextField.ANY);//GEN-LINE:|198-getter|1|198-postInit
             // Insert post-init code here
         }//GEN-BEGIN:|198-getter|2|

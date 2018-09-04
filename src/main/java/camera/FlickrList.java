@@ -67,6 +67,7 @@ public class FlickrList extends List implements CommandListener, Runnable, Progr
               new StringItem("Visit\n", "Goto to obtain mini-token"),
               new StringItem("", "www.flickr.com/auth-72157602577356052", Item.HYPERLINK),
               new StringItem("to obtain mini-token", ""),
+              //!NO-NUMERIC
               new TextField("mini-token", RMSOption.getStringOpt(RMSOption.SO_FLICKRTOKEN), 9, TextField.ANY)
           });
         saveRegCommand=new Command(LangHolder.getString(Lang.save), Command.ITEM, 1);
