@@ -27,7 +27,7 @@
         <dependency>
             <groupId>ru.netradar</groupId>
             <artifactId>mapnav</artifactId>
-            <version>4.8.18</version>
+            <version>4.8.19</version>
         </dependency>
 
     </dependencies>
