@@ -8,13 +8,17 @@ J2ME GPS navigation in mobile phone
 ##Mobile navigation with J2ME-enabled phone
 
 ##Map direction rotatio, track record
+
 [![Base map with rotation](https://raw.githubusercontent.com/magdel/MapNav/master/docs/img/maprot.gif)]
 
 ##Navigational compass with active waypoint info
+
 [![Compass with waypoint direction](https://raw.githubusercontent.com/magdel/MapNav/master/docs/img/comp_ani.gif)]
 
 ##Speedometer with active waypoint info
+
 [![Speedometer mode](https://raw.githubusercontent.com/magdel/MapNav/master/docs/img/speed_ani.gif)]
 
 ##Flight plan navigation
+
 [![Flight navigation](https://raw.githubusercontent.com/magdel/MapNav/master/docs/img/navrot.gif)]
