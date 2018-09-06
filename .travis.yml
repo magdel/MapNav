@@ -6,6 +6,7 @@ cache:
 script:
 - set -e
 - mvn clean install
+- mvn cobertura:cobertura
 env:
   global:
   - MAVEN_OPTS="-Xmx256m"
