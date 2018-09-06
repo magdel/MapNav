@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ru.netradar</groupId>
+    <artifactId>mapnav</artifactId>
+    <version>4.8.19</version>
+    <description>midlet app project</description>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <wtk.home>${basedir}/../WTK</wtk.home>
+        <j2me.midlet.vendor>Pavel Raev</j2me.midlet.vendor>
+        <j2me.midlet.name>MapNav</j2me.midlet.name>
+        <j2me.midlet.version>${version}</j2me.midlet.version>
+        <j2me.midlet.configuration>CLDC-1.1</j2me.midlet.configuration>
+        <j2me.midlet.profile>MIDP-2.0</j2me.midlet.profile>
+
+        <!-- Uncomment for wma or JSR-82 -->
+        <wtk.bluetooth.enabled>true</wtk.bluetooth.enabled>
+        <wtk.wma.enabled>true</wtk.wma.enabled>
+        <wtk.wma.version>2.0</wtk.wma.version>
+        <wtk.locationservices.enabled>true</wtk.locationservices.enabled>
+        <wtk.optionalpda.enabled>true</wtk.optionalpda.enabled>
+        <!-- -->
+    </properties>
+
+
+    <dependencies>
+
+
+        <dependency>
+            <groupId>come.sun.wtk</groupId>
+            <artifactId>cldc</artifactId>
+            <version>1.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../WTK/lib/cldcapi11.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>come.sun.wtk</groupId>
+            <artifactId>midp</artifactId>
+            <version>2.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../WTK/lib/midpapi20.jar</systemPath>
+        </dependency>
+
+        <dependency>
+            <groupId>come.sun.wtk</groupId>
+            <artifactId>jsr75</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../WTK/lib/jsr75.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>come.sun.wtk</groupId>
+            <artifactId>jsr082</artifactId>
+            <version>1.1</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../WTK/lib/jsr082.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>come.sun.wtk</groupId>
+            <artifactId>jsr179</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../WTK/lib/jsr179.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>come.sun.wtk</groupId>
+            <artifactId>wma</artifactId>
+            <version>2.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../WTK/lib/wma20.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>come.sun.wtk</groupId>
+            <artifactId>mmapi</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../WTK/lib/mmapi.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>come.sun.wtk</groupId>
+            <artifactId>api</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../WTK/lib/api.jar</systemPath>
+        </dependency>
+        <dependency>
+            <groupId>come.sun.wtk</groupId>
+            <artifactId>nokiaext</artifactId>
+            <version>1.0</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/../WTK/lib/nokiaext.jar</systemPath>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.3</source>
+                    <target>1.1</target>
+          <compilerArgs>
+            <arg>-verbose</arg>
+            <arg>-bootclasspath</arg>
+            <arg>${basedir}/../WTK/lib</arg>
+          </compilerArgs>
+                </configuration>
+            </plugin>
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.7</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>com.pyx4me</groupId>
+                <artifactId>j2me-maven-plugin</artifactId>
+                <version>2.0.4</version>
+                <executions>
+                   <execution>
+                        <goals>
+                            <goal>package</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <useWtkLibs>false</useWtkLibs>
+                    <proguardPreverify>true</proguardPreverify>
+                    <proguardInclude>${basedir}/midlets.pro</proguardInclude>
+                    <proguard>true</proguard>
+                    <obfuscate>true</obfuscate>
+                    <!-- Optional, populated by default-->
+                    <jadAttributes>
+                    	<MIDlet-1>MapNav,/icon.png,app.MapMidlet</MIDlet-1>
+                        <MIDlet-Icon>/icon.png</MIDlet-Icon>
+                        <MicroEdition-Profile>${j2me.midlet.profile}</MicroEdition-Profile>
+                        <MicroEdition-Configuration>${j2me.midlet.configuration}</MicroEdition-Configuration>
+                        <MIDlet-Vendor>${j2me.midlet.vendor}</MIDlet-Vendor>
+                        <MIDlet-Description>GPS navigation with YOUR MAP in your mobile phone</MIDlet-Description>
+                        <MIDlet-Info-URL>http://mapnav.spb.ru</MIDlet-Info-URL>
+                        <MIDlet-Permissions>javax.microedition.io.Connector.sms, javax.wireless.messaging.sms.send, javax.wireless.messaging.sms.receive, javax.microedition.io.Connector.http, javax.microedition.io.PushRegistry</MIDlet-Permissions>
+                        <MIDlet-Permissions-Opt>javax.microedition.io.Connector.bluetooth.client, javax.microedition.io.Connector.file.read, javax.microedition.io.Connector.file.write, javax.microedition.io.Connector.mms, javax.wireless.messaging.mms.send, javax.microedition.io.Connector.socket, javax.microedition.location.Location, javax.microedition.media.control.VideoControl.getSnapshot, javax.microedition.media.control.RecordControl, javax.microedition.io.Connector.datagram</MIDlet-Permissions-Opt>
+                        <MIDlet-Push-1>sms://:24789,app.MapMidlet,*</MIDlet-Push-1>
+                        <Nokia-MIDlet-No-Exit>true</Nokia-MIDlet-No-Exit>
+                        <SEMC-StandbyApplication>Y</SEMC-StandbyApplication>
+                        <SMS-Port>24789</SMS-Port>
+                    </jadAttributes>
+
+
+                    <!-- -->
+                    <midlets>
+                        <MIDlet>
+                            <name>MapNav</name>
+                            <icon>/icon.png</icon>
+                            <class>app.MapMidlet</class>
+                        </MIDlet>
+                    </midlets>
+                    -->
+                    <!-- Optional, populated by default -->
+                    <archive>
+                        <manifestEntries>
+                            <MIDlet-1>MIDlet-1: MapNav,/icon.png,app.MapMidlet</MIDlet-1>
+                            <MIDlet-Name>${j2me.midlet.name}</MIDlet-Name>
+                            <MIDlet-Icon>/icon.png</MIDlet-Icon>
+                            <MIDlet-Vendor>${j2me.midlet.vendor}</MIDlet-Vendor>
+                            <MIDlet-Version>${j2me.midlet.version}</MIDlet-Version>
+                            <MicroEdition-Configuration>${j2me.midlet.configuration}</MicroEdition-Configuration>
+                            <MicroEdition-Profile>${j2me.midlet.profile}</MicroEdition-Profile>
+                            <MIDlet-Description>GPS navigation with YOUR MAP in your mobile phone</MIDlet-Description>
+                            <MIDlet-Info-URL>http://mapnav.spb.ru</MIDlet-Info-URL>
+                            <MIDlet-Permissions>javax.microedition.io.Connector.sms, javax.wireless.messaging.sms.send, javax.wireless.messaging.sms.receive, javax.microedition.io.Connector.http, javax.microedition.io.PushRegistry</MIDlet-Permissions>
+                            <MIDlet-Permissions-Opt>javax.microedition.io.Connector.bluetooth.client, javax.microedition.io.Connector.file.read, javax.microedition.io.Connector.file.write, javax.microedition.io.Connector.mms, javax.wireless.messaging.mms.send, javax.microedition.io.Connector.socket, javax.microedition.location.Location, javax.microedition.media.control.VideoControl.getSnapshot, javax.microedition.media.control.RecordControl, javax.microedition.io.Connector.datagram</MIDlet-Permissions-Opt>
+                            <MIDlet-Push-1>sms://:24789,app.MapMidlet,*</MIDlet-Push-1>
+                            <Nokia-MIDlet-No-Exit>true</Nokia-MIDlet-No-Exit>
+                            <SEMC-StandbyApplication>Y</SEMC-StandbyApplication>
+                            <SMS-Port>24789</SMS-Port>
+                        </manifestEntries>
+                    </archive>
+                    <!-- -->
+
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>net.sf.proguard</groupId>
+                        <artifactId>proguard</artifactId>
+                        <version>4.4</version>
+                        <scope>runtime</scope>
+                    </dependency>
+
+                </dependencies>
+            </plugin>
+
+
+            <!-- Configure Eclipse-Me -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.10</version>
+                <configuration>
+                    <buildcommands>
+                        <buildcommand>org.eclipse.jdt.core.javabuilder</buildcommand>
+                        <buildcommand>eclipseme.core.preverifier</buildcommand>
+                    </buildcommands>
+                    <projectnatures>
+                        <projectnature>org.eclipse.jdt.core.javanature</projectnature>
+                        <projectnature>eclipseme.core.nature</projectnature>
+                    </projectnatures>
+                    <classpathContainers>
+                        <classpathContainer>J2MELIB</classpathContainer>
+                        <classpathContainer>org.eclipse.jdt.launching.JRE_CONTAINER</classpathContainer>
+                    </classpathContainers>
+                </configuration>
+            </plugin>
+
+			<!-- this is not part of the example, remove it when project used as template -->
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                         <descriptorRef>src</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                         <phase>package</phase>
+                         <goals>
+                            <goal>attached</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>

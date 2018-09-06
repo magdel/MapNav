@@ -1,0 +1,17 @@
+MIDlet-1: MapNav, /icon.png, app.MapMidlet
+MIDlet-Description: GPS navigation with YOUR MAP in your mobile phone
+MIDlet-Icon: /icon.png
+MIDlet-Info-URL: http://mapnav.spb.ru
+MIDlet-Jar-Size: 670203
+MIDlet-Jar-URL: nb.jar
+MIDlet-Name: MapNav
+MIDlet-Permissions: javax.microedition.io.Connector.sms, javax.wireless.messaging.sms.send, javax.wireless.messaging.sms.receive, javax.microedition.io.Connector.http, javax.microedition.io.PushRegistry
+MIDlet-Permissions-Opt: javax.microedition.io.Connector.bluetooth.client, javax.microedition.io.Connector.file.read, javax.microedition.io.Connector.file.write, javax.microedition.io.Connector.mms, javax.wireless.messaging.mms.send, javax.microedition.io.Connector.socket, javax.microedition.location.Location, javax.microedition.media.control.VideoControl.getSnapshot, javax.microedition.media.control.RecordControl, javax.microedition.io.Connector.datagram
+MIDlet-Push-1: sms://:24789,app.MapMidlet,*
+MIDlet-Vendor: Pavel Raev
+MIDlet-Version: 4.8.18
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0
+Nokia-MIDlet-No-Exit: true
+SEMC-StandbyApplication: Y
+SMS-Port: 24789
