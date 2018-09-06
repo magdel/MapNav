@@ -1,5 +1,17 @@
 language: java
+sudo: false
+cache:
+  directories:
+  - $HOME/.m2
+script:
+- set -e
+- mvn test -B
+- mvn cobertura:cobertura
+env:
+  global:
+  - MAVEN_OPTS="-Xmx256m"
+  - JAVA_OPTS="-Xmx256m"
 jdk:
-  - oraclejdk8
+- oraclejdk8
 after_success:
-  - mvn clean packaget
+- "bash <(curl -s https://codecov.io/bash)"

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://earth.google.com/kml/2.0">
+<NetworkLink>
+  <name>WikiMapia</name>
+  <open>1</open>
+  <description>WikiMapia is an online map resource that combines Google Maps with a Wiki system.</description> 
+  <Url>
+   <href>http://wikimapia.org/d/</href>
+    <viewRefreshMode>onStop</viewRefreshMode>
+    <viewRefreshTime>2</viewRefreshTime>
+  </Url>
+</NetworkLink>
+</kml>

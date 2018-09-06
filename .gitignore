@@ -6,3 +6,5 @@
 /nb/build/
 /nb/dist/
 /target
+/mapnav-midlet-app/target
+/mapnav-midlet-test/target
