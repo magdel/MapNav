@@ -2,7 +2,7 @@ MIDlet-1: MapNav, /icon.png, app.MapMidlet
 MIDlet-Description: GPS navigation with YOUR MAP in your mobile phone
 MIDlet-Icon: /icon.png
 MIDlet-Info-URL: http://mapnav.spb.ru
-MIDlet-Jar-Size: 670203
+MIDlet-Jar-Size: 652713
 MIDlet-Jar-URL: nb.jar
 MIDlet-Name: MapNav
 MIDlet-Permissions: javax.microedition.io.Connector.sms, javax.wireless.messaging.sms.send, javax.wireless.messaging.sms.receive, javax.microedition.io.Connector.http, javax.microedition.io.PushRegistry

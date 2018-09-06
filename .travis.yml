@@ -5,7 +5,7 @@ cache:
   - $HOME/.m2
 script:
 - set -e
-- mvn clean install
+- mvn test -B
 - mvn cobertura:cobertura
 env:
   global:
