@@ -3,6 +3,12 @@ J2ME GPS navigation in mobile phone
 
 [![Travis CI](https://travis-ci.org/magdel/MapNav.svg?branch=master)](https://travis-ci.org/magdel/MapNav)
 [![Test Coverage](https://img.shields.io/codecov/c/github/magdel/MapNav.svg)](https://codecov.io/github/magdel/MapNav?branch=master)
+
+
+[![codecov](https://codecov.io/gh/magdel/MapNav/branch/master/graph/badge.svg)](https://codecov.io/gh/magdel/MapNav)
+
+
+
 [![codebeat badge](https://codebeat.co/badges/0ffbfbf4-bbeb-480a-a6e1-45eac3b06724)](https://codebeat.co/projects/github-com-magdel-mapnav-master)
 
 
