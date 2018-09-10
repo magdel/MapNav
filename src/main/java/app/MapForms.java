@@ -1376,7 +1376,7 @@ public class MapForms implements GeneralFeedback, CommandListener, ItemCommandLi
     /**
      * Called by a system to indicated that a command has been invoked on a particular item.
      * @param command the Command that was invoked
-     * @param displayable the Item where the command was invoked
+     * @param item the Item where the command was invoked
      */
     public void commandAction(Command command, Item item) {//GEN-END:|8-itemCommandAction|0|8-preItemCommandAction
         // Insert global pre-action code here
@@ -4541,21 +4541,6 @@ public class MapForms implements GeneralFeedback, CommandListener, ItemCommandLi
     }
 //</editor-fold>//GEN-END:|570-getter|2|
 
-//    /**
-//     * Performs an action assigned to the selected list element in the listBT component.
-//     */
-//    public void listBTAction() {//GEN-END:|570-action|0|570-preAction
-//        // enter pre-action user code here
-//        switch (getListBT().getSelectedIndex()) {//GEN-BEGIN:|570-action|1|577-preAction
-//            case 0://GEN-END:|570-action|1|577-preAction
-//                // write pre-action user code here
-////GEN-LINE:|570-action|2|577-postAction
-//                // write post-action user code here
-//                break;//GEN-BEGIN:|570-action|3|570-postAction
-//        }//GEN-END:|570-action|3|570-postAction
-//        // enter post-action user code here
-//    }//GEN-BEGIN:|570-action|4|
-////</editor-fold>//GEN-END:|570-action|4|
 
 //<editor-fold defaultstate="collapsed" desc=" Generated Getter: listKML ">//GEN-BEGIN:|579-getter|0|579-preInit
     /**
@@ -4634,22 +4619,6 @@ public class MapForms implements GeneralFeedback, CommandListener, ItemCommandLi
         return listIMaps;
     }
 //</editor-fold>//GEN-END:|596-getter|2|
-
-//    /**
-//     * Performs an action assigned to the selected list element in the listIMaps component.
-//     */
-//    public void listIMapsAction() {//GEN-END:|596-action|0|596-preAction
-//        // enter pre-action user code here
-//        switch (getListIMaps().getSelectedIndex()) {//GEN-BEGIN:|596-action|1|603-preAction
-//            case 0://GEN-END:|596-action|1|603-preAction
-//                // write pre-action user code here
-////GEN-LINE:|596-action|2|603-postAction
-//                // write post-action user code here
-//                break;//GEN-BEGIN:|596-action|3|596-postAction
-//        }//GEN-END:|596-action|3|596-postAction
-//        // enter post-action user code here
-//    }//GEN-BEGIN:|596-action|4|
-////</editor-fold>//GEN-END:|596-action|4|
 
 
     public List getListWPMenu() {
@@ -7335,13 +7304,6 @@ renameTrack();
         choiceDebug.setSelectedIndex(3, RMSOption.correctMapAll);
         choiceDebug.setSelectedIndex(4, RMSOption.writeNMEA);
         choiceDebug.setSelectedIndex(5, RMSOption.tellNewDebugVersion);
-//#mdebug
-//#         String s=DebugLog.logString();
-//#         if (s.length()>1000) {
-//#             s=s.substring(1, 999);
-//#         }
-//#         stringLog.setText(s);
-//#enddebug
 
         textLogSavePath.setString(RMSOption.logSavePath);
     }
@@ -7374,40 +7336,7 @@ renameTrack();
             MapCanvas.showmsg(LangHolder.getString(Lang.error), LangHolder.getString(Lang.followf), AlertType.ERROR, getGotoForm());
         }
     }
-    /*
-    private void runMathTest(){
-    Form f=get_formTestMath();
-    f.deleteAll();
-    f.append(String.valueOf(Math.PI));
-    f.append(String.valueOf(MapUtil.PI));
-    f.append("cos PI/2");
-    f.append(String.valueOf(Math.cos(Math.PI/2)));
-    f.append(String.valueOf(MapUtil.cos(MapUtil.PI/2)));
-    f.append("3PI");
-    f.append(String.valueOf(Math.cos(Math.PI*3.)));
-    f.append(String.valueOf(MapUtil.cos(MapUtil.PI*3.)));
-    f.append("PI/4");
-    f.append(String.valueOf(Math.cos(Math.PI/4)));
-    f.append(String.valueOf(MapUtil.cos(MapUtil.PI/4)));
-    f.append("0");
-    f.append(String.valueOf(Math.cos(0)));
-    f.append(String.valueOf(MapUtil.cos(0)));
-    f.append("Store free:");
-    f.append(String.valueOf(MapCanvas.map.rmss.getSizeAvailable()));
-    f.append("sin PI/2");
-    f.append(String.valueOf(Math.sin(Math.PI/2)));
-    f.append(String.valueOf(MapUtil.sin(MapUtil.PI/2)));
-    f.append("PI/3");
-    f.append(String.valueOf(Math.sin(Math.PI/3)));
-    f.append(String.valueOf(MapUtil.sin(MapUtil.PI/3)));
-    f.append("PI/4");
-    f.append(String.valueOf(Math.sin(Math.PI/4)));
-    f.append(String.valueOf(MapUtil.sin(MapUtil.PI/4)));
-    f.append("0");
-    f.append(String.valueOf(Math.sin(0)));
-    f.append(String.valueOf(MapUtil.sin(0)));
 
-    }*/
     private byte mtc;
     private final static byte EXTMAP=1;
     private final static byte INTMAP=2;
