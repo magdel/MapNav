@@ -7,26 +7,42 @@ J2ME GPS navigation in mobile phone
 [![codebeat badge](https://codebeat.co/badges/0ffbfbf4-bbeb-480a-a6e1-45eac3b06724)](https://codebeat.co/projects/github-com-magdel-mapnav-master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-
-
 ## Mobile navigation with J2ME-enabled phone
 
 
-## Map direction rotatio, track record
+### Map direction rotatio, track record
 
 [![Base map with rotation](https://raw.githubusercontent.com/magdel/MapNav/master/docs/img/maprot.gif)]
 
 
-## Navigational compass with active waypoint info
+### Navigational compass with active waypoint info
 
 [![Compass with waypoint direction](https://raw.githubusercontent.com/magdel/MapNav/master/docs/img/comp_ani.gif)]
 
 
-## Speedometer with active waypoint info
+### Speedometer with active waypoint info
 
 [![Speedometer mode](https://raw.githubusercontent.com/magdel/MapNav/master/docs/img/speed_ani.gif)]
 
 
-## Flight plan navigation
+### Flight plan navigation
 
 [![Flight navigation](https://raw.githubusercontent.com/magdel/MapNav/master/docs/img/navrot.gif)]
+
+
+## How to build
+
+* checkout the repo
+* mvn clean package
+* get JAR & JAD from /target
+
+## How to develop
+
+To compile and run in emulator or device:
+* WTK 2.5, CLDC-1.1, MIDP-2.0 device profile, with extra libs (may be found in /WTK).
+* IDE supporting JavaME development: Netbeans 7 is great for that, just add custom user device with extra libs and name mapping some device in emulator. Netbeans project is ready in /nb
+
+To run unit tests:
+* Open Maven project in your favorite IDE (like Intellij IDEA)
+* Execute unit tests you need
+

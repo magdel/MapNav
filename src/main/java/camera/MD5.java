@@ -64,7 +64,7 @@ public class MD5
         0, 0, 0, 0
     };
 
-    public MD5()
+    private MD5()
     {
         MD5State_fld = new MD5State();
         MD5State_cop = new MD5State();
@@ -89,7 +89,7 @@ public class MD5
 
     public String getHashString()
     {
-        return a(getHash());
+        return toHex(getHash());
     }
 
     public static byte[] getHash(byte abyte0[])
@@ -230,7 +230,7 @@ public class MD5
 //        update(s.getBytes(s1));
 //    }
 
-    private static String a(byte abyte0[])
+    private static String toHex(byte abyte0[])
     {
         StringBuffer stringbuffer = new StringBuffer(abyte0.length * 2);
         for(int i = 0; i < abyte0.length; i++)

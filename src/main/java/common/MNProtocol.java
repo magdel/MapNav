@@ -14,10 +14,6 @@ package common;
  */
 public class MNProtocol {
   
-//  /** Creates a new instance of MNProtocol */
-//  public MNProtocol() {
-//  }
-  
   public final static byte STATUS_WAITVERSION = 0;
   public final static byte STATUS_WAITAUTHORIZATION = 1;
   public final static byte STATUS_WAITUSERS = 2;
