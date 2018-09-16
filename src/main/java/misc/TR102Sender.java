@@ -4,6 +4,7 @@
  */
 package misc;
 
+import RPMap.FontUtil;
 import RPMap.MapCanvas;
 import RPMap.MapUtil;
 import RPMap.RMSOption;
@@ -267,7 +268,7 @@ public class TR102Sender extends Canvas implements CommandListener, Runnable {
 
     protected void paint(Graphics g) {
 
-        g.setFont(MapUtil.SMALLFONTB);
+        g.setFont(FontUtil.SMALLFONTB);
         int fh=g.getFont().getHeight();
         int dminx=0;
         int dminy=fh;

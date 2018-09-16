@@ -9,6 +9,7 @@
 
 package misc;
 
+import RPMap.FontUtil;
 import RPMap.MapCanvas;
 import RPMap.MapPoint;
 import RPMap.MapRoute;
@@ -120,7 +121,7 @@ public class LocationCanvas extends Canvas implements CommandListener,Runnable, 
   }
   protected void paint(Graphics g) {
     
-    g.setFont(MapUtil.SMALLFONTB);
+    g.setFont(FontUtil.SMALLFONTB);
     int fh=g.getFont().getHeight();
     int dminx = 0;
     int dminy = fh;

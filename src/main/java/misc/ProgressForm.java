@@ -8,9 +8,9 @@
  */
 package misc;
 
+import RPMap.FontUtil;
 import RPMap.MapCanvas;
-import RPMap.MapUtil;
-import RPMap.RMSOption;
+
 import javax.microedition.lcdui.Canvas;
 import javax.microedition.lcdui.Command;
 import javax.microedition.lcdui.CommandListener;
@@ -59,7 +59,7 @@ public class ProgressForm extends Canvas implements Runnable, CommandListener, P
 
     protected void paint(Graphics g) {
         try {
-            g.setFont(MapUtil.MEDIUMFONT);
+            g.setFont(FontUtil.MEDIUMFONT);
             g.setColor(0xFFFFFF);
             g.fillRect(0, 0, getWidth(), getHeight());
             g.setColor(0x808080);
@@ -119,12 +119,12 @@ public class ProgressForm extends Canvas implements Runnable, CommandListener, P
             if (percent>=0){
                 String s=String.valueOf(percent)+percentSign;
                 g.setColor(0x0);
-                g.setFont(MapUtil.SMALLFONTB);
-                int pw=MapUtil.SMALLFONTB.stringWidth(s)/2;
-                int fto=(dy-MapUtil.SMALLFONTB.getHeight())/2;
-                g.fillRoundRect(dcx-pw-4, dcy+fto+2, pw+pw+8, MapUtil.SMALLFONTB.getHeight(), 3, 3);
+                g.setFont(FontUtil.SMALLFONTB);
+                int pw= FontUtil.SMALLFONTB.stringWidth(s)/2;
+                int fto=(dy- FontUtil.SMALLFONTB.getHeight())/2;
+                g.fillRoundRect(dcx-pw-4, dcy+fto+2, pw+pw+8, FontUtil.SMALLFONTB.getHeight(), 3, 3);
                 g.setColor(0xFFFFFF);
-                g.setFont(MapUtil.MEDIUMFONT);
+                g.setFont(FontUtil.MEDIUMFONT);
                 g.drawString(s, dcx, dcy+fto+2, Graphics.HCENTER|Graphics.TOP);
             }
             g.setColor(0xFFFFFF);

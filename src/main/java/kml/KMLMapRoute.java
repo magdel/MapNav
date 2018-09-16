@@ -8,6 +8,7 @@
  */
 package kml;
 
+import RPMap.FontUtil;
 import RPMap.MapCanvas;
 import RPMap.MapRoute;
 import RPMap.MapUtil;
@@ -381,17 +382,17 @@ public final class KMLMapRoute extends MapRoute implements ProgressStoppable {
 
                 if (!splitedName.equals(p2.name)){
                     splitedV.removeAllElements();
-                    TextCanvas.split(p2.name, splitedV, g.getClipWidth()*3/4, MapUtil.SMALLFONT);
+                    TextCanvas.split(p2.name, splitedV, g.getClipWidth()*3/4, FontUtil.SMALLFONT);
                     splitedName=p2.name;
                 }
                 if (splitedV.size()>0){
                     Font f=g.getFont();
-                    g.setFont(MapUtil.SMALLFONT);
+                    g.setFont(FontUtil.SMALLFONT);
                     g.setColor(RMSOption.foreColor);
                     for (int i=0; i<splitedV.size(); i++) {
                         //s=(String)closest.status_v.elementAt(i);
                         MapCanvas.drawMapString(g, (String) splitedV.elementAt(i),
-                          MapCanvas.dmaxx, MapCanvas.dminy+5+(i+1)*MapUtil.SMALLFONT.getHeight(), Graphics.RIGHT|Graphics.TOP);
+                          MapCanvas.dmaxx, MapCanvas.dminy+5+(i+1)* FontUtil.SMALLFONT.getHeight(), Graphics.RIGHT|Graphics.TOP);
 //              g.drawString(s,dminx,dminy+(i+1)*MapUtil.SMALLFONT.getHeight(),Graphics.LEFT|Graphics.TOP);
                     }
                     g.setFont(f);
