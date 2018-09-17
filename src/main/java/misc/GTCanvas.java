@@ -8,6 +8,7 @@
  */
 package misc;
 
+import RPMap.FontUtil;
 import RPMap.MapCanvas;
 import RPMap.MapRoute;
 import RPMap.MapUtil;
@@ -128,7 +129,7 @@ public class GTCanvas extends Canvas implements CommandListener, Runnable, GPSLo
 
     protected void paint(Graphics g) {
 
-        g.setFont(MapUtil.SMALLFONTB);
+        g.setFont(FontUtil.SMALLFONTB);
         int fh=g.getFont().getHeight();
         int dminx=0;
         int dminy=fh;
@@ -262,13 +263,13 @@ public class GTCanvas extends Canvas implements CommandListener, Runnable, GPSLo
             }
 
             g.setColor(backColor);
-            g.fillRect(0, sy, dmaxx, MapUtil.LARGEFONTB.getHeight());
-            g.setFont(MapUtil.LARGEFONTB);
+            g.fillRect(0, sy, dmaxx, FontUtil.LARGEFONTB.getHeight());
+            g.setFont(FontUtil.LARGEFONTB);
             g.setColor(frontColor);
             g.drawString(cap, dcx, sy, Graphics.HCENTER|Graphics.TOP);
-            sy+=MapUtil.LARGEFONTB.getHeight();
+            sy+= FontUtil.LARGEFONTB.getHeight();
             g.setColor(0xFFFF40);
-            g.setFont(MapUtil.SMALLFONT);
+            g.setFont(FontUtil.SMALLFONT);
             g.drawString(det, 0, sy, Graphics.LEFT|Graphics.TOP);
 
         }

@@ -8,6 +8,7 @@
 
 package raev.ui.menu;
 
+import RPMap.FontUtil;
 import RPMap.MapCanvas;
 import RPMap.MapTimerTask;
 import RPMap.MapUtil;
@@ -78,7 +79,7 @@ public class CanvasMenu{
   int my;
   public void drawMenu(Graphics g){
     Font bf = g.getFont();
-    Font f = MapUtil.MEDIUMFONT;
+    Font f = FontUtil.MEDIUMFONT;
     g.setFont(f);
     fh = f.getHeight();
     int mx = g.getClipWidth();

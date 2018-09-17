@@ -109,33 +109,7 @@ public final class SoundRecorder implements PlayerListener, Runnable, ProgressSt
                 m_cRecordControl.startRecord();
                 m_bPlayer.start();
                 recStarted=System.currentTimeMillis();
-                try {
-                    while (System.currentTimeMillis()-recStarted<MAX_RECORD_MILLIS) {
-                        Thread.sleep(300);
-                        if (stopped){
-                            //#mdebug
-//#                             if (RMSOption.debugEnabled){
-//#                                 DebugLog.add2Log("SR st br");
-//#                             }
-                            //#enddebug
-                            break;
-                        }
-                        if (progressResponse!=null){
-                            try {
-                                progressResponse.setProgress((byte) (100*(System.currentTimeMillis()-recStarted)/MAX_RECORD_MILLIS),
-                                  MapUtil.time2String(System.currentTimeMillis()-recStarted)+" "+baos.size());
-                            } catch (Throwable r) {
-                            }
-                        }
-                    }
-                } catch (InterruptedException _ex) {
-                    stopped=true;
-//#mdebug
-//#                     if (RMSOption.debugEnabled){
-//#                         DebugLog.add2Log("SR intr");
-//#                     }
-                    //#enddebug
-                }
+                recording(baos);
                 clearPlayer();
                 soundBytes=baos.toByteArray();
                 MapSound.playTone(MapSound.GPSADDTRACKPOINT);
@@ -162,6 +136,37 @@ public final class SoundRecorder implements PlayerListener, Runnable, ProgressSt
         }
         return soundBytes;
     }
+
+    private void recording(ByteArrayOutputStream baos) {
+        try {
+            while (System.currentTimeMillis()-recStarted<MAX_RECORD_MILLIS) {
+                Thread.sleep(300);
+                if (stopped){
+                    //#mdebug
+//#                             if (RMSOption.debugEnabled){
+//#                                 DebugLog.add2Log("SR st br");
+//#                             }
+                    //#enddebug
+                    break;
+                }
+                if (progressResponse!=null){
+                    try {
+                        progressResponse.setProgress((byte) (100*(System.currentTimeMillis()-recStarted)/MAX_RECORD_MILLIS),
+                          MapUtil.time2String(System.currentTimeMillis()-recStarted)+" "+baos.size());
+                    } catch (Throwable r) {
+                    }
+                }
+            }
+        } catch (InterruptedException _ex) {
+            stopped=true;
+//#mdebug
+//#                     if (RMSOption.debugEnabled){
+//#                         DebugLog.add2Log("SR intr");
+//#                     }
+            //#enddebug
+        }
+    }
+
     private boolean stopped;
     private final static int MAX_RECORD_MILLIS=10000;
 

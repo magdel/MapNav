@@ -10,13 +10,6 @@
 package RPMap;
 
 import app.MapForms;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Calendar;
-import java.util.TimeZone;
-import java.util.Vector;
 import misc.MVector;
 import misc.ProgressResponse;
 import misc.ProgressStoppable;
@@ -24,6 +17,13 @@ import misc.Util;
 import org.kxml2.io.KXmlParser;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Calendar;
+import java.util.TimeZone;
 
 /**
  *
@@ -137,7 +137,7 @@ public abstract class MapRouteLoader implements Runnable, ProgressStoppable {
         char TYPE;
         MapRoute route=null;
         MapPoint pt=null;
-        int rId;
+        //int rId;
         boolean inRoute=false;
         ByteArrayOutputStream baos=new ByteArrayOutputStream(150);
 
@@ -159,14 +159,9 @@ public abstract class MapRouteLoader implements Runnable, ProgressStoppable {
                     if (TYPE=='R'){
                         try {
                             data=MapUtil.parseString(DATA_STRING, ',');
-                            rId=Integer.parseInt(data[0]);
-                            String nam=data[1];
-                            int acolor=Integer.parseInt(data[3]);
-                            acolor=swapOziColor(acolor);
-                            route=new MapRoute(MapRoute.ROUTEKIND);
+                        //    rId=Integer.parseInt(data[0]);
+                            route = createRoute(data);
                             routes.addElement(route);
-                            route.name=nam;
-                            route.color=acolor;
                             inRoute=true;
                         } catch (Exception e) {
                         }
@@ -175,26 +170,7 @@ public abstract class MapRouteLoader implements Runnable, ProgressStoppable {
                         if (inRoute){
                             try {
                                 data=MapUtil.parseString(DATA_STRING, ',');
-                                double la=Double.parseDouble(data[4]);
-                                double lo=Double.parseDouble(data[5]);
-                                String nam=data[3];
-
-                                if (data[12]!=null){
-                                    if (nam!=null){
-                                        if (data[12].length()>nam.length()){
-                                            nam=data[12];
-                                        }
-                                    }
-                                }
-
-                                int pS=Integer.parseInt(data[7]);
-                                int fC=swapOziColor(Integer.parseInt(data[10]));
-                                int bC=swapOziColor(Integer.parseInt(data[11]));
-
-                                pt=new MapPoint(la, lo, 0, nam);
-                                pt.pointSymbol=(byte) pS;
-                                pt.foreColor=fC;
-                                pt.backColor=bC;
+                                pt = createMapPoint(data);
 
                                 route.addMapPoint(pt);
 
@@ -215,6 +191,42 @@ public abstract class MapRouteLoader implements Runnable, ProgressStoppable {
         } while ((i!=-1));
     }
 
+    private static MapPoint createMapPoint(String[] data) {
+        MapPoint pt;
+        double la=Double.parseDouble(data[4]);
+        double lo=Double.parseDouble(data[5]);
+        String nam=data[3];
+
+        if (data[12] != null) {
+            if (nam != null) {
+                if (data[9].length() > nam.length()) {
+                    nam = data[9];
+                }
+            }
+        }
+
+        int pS=Integer.parseInt(data[7]);
+        int fC=swapOziColor(Integer.parseInt(data[10]));
+        int bC=swapOziColor(Integer.parseInt(data[11]));
+
+        pt=new MapPoint(la, lo, 0, nam);
+        pt.pointSymbol=(byte) pS;
+        pt.foreColor=fC;
+        pt.backColor=bC;
+        return pt;
+    }
+
+    private static MapRoute createRoute(String[] data) {
+        MapRoute route;
+        String nam=data[1];
+        int acolor=Integer.parseInt(data[3]);
+        acolor=swapOziColor(acolor);
+        route=new MapRoute(MapRoute.ROUTEKIND);
+        route.name=nam;
+        route.color=acolor;
+        return route;
+    }
+
     void loadWayPointsFromStream(InputStream is) throws IOException {
 
         int i=0;
@@ -224,16 +236,16 @@ public abstract class MapRouteLoader implements Runnable, ProgressStoppable {
         String DATA_STRING;
         //char TYPE;
         MapRoute route=null;
-        MapPoint pt=null;
+        //MapPoint pt=null;
         int rId;
-        boolean inRoute=false;
+       // boolean inRoute=false;
         int nR=0;
 
         route=new MapRoute(MapRoute.WAYPOINTSKIND);
         routes.addElement(route);
         route.name=MapUtil.extractFilename(furl);
 
-        inRoute=true;
+      //  inRoute=true;
         ByteArrayOutputStream baos=new ByteArrayOutputStream(150);
         // Start reading the data from the file
         do {
@@ -252,27 +264,10 @@ public abstract class MapRouteLoader implements Runnable, ProgressStoppable {
                         DATA_STRING=Util.byteArrayToString(baos.toByteArray(), true);
                         // Check the gps data type and convert the information to a more readable format.
                         //if(TYPE == 'W'){
-                        if (inRoute){
+                  //      if (inRoute){
                             try {
                                 data=MapUtil.parseString(DATA_STRING, ',');
-                                double la=Double.parseDouble(data[1]);
-                                double lo=Double.parseDouble(data[2]);
-                                String nam=data[0];
-                                if (data[9]!=null){
-                                    if (nam!=null){
-                                        if (data[9].length()>nam.length()){
-                                            nam=data[9];
-                                        }
-                                    }
-                                }
-                                int pS=Integer.parseInt(data[4]);
-                                int fC=swapOziColor(Integer.parseInt(data[7]));
-                                int bC=swapOziColor(Integer.parseInt(data[8]));
-
-                                pt=new MapPoint(la, lo, 0, nam);
-                                pt.pointSymbol=(byte) pS;
-                                pt.foreColor=fC;
-                                pt.backColor=bC;
+                                MapPoint pt = createMapPoint(data);
                                 //pt.kind=MapPoint.WAYPOINT;
 
                                 route.addMapPoint(pt);
@@ -280,7 +275,7 @@ public abstract class MapRouteLoader implements Runnable, ProgressStoppable {
                             } catch (Exception e) {
                                 //       }
                             }
-                        }
+                    //    }
                         //  else {
                         //    inRoute=false;
                         //    route=null;
@@ -304,7 +299,6 @@ public abstract class MapRouteLoader implements Runnable, ProgressStoppable {
         String DATA_STRING;
         //char TYPE;
         MapRoute route=null;
-        MapPoint pt=null;
         int rId;
         boolean inRoute=false;
         int nR=0;
@@ -347,11 +341,7 @@ public abstract class MapRouteLoader implements Runnable, ProgressStoppable {
                     if (inRoute){
                         try {
                             data=MapUtil.parseString(','+DATA_STRING, ',');
-                            double la=Double.parseDouble(data[0]);
-                            double lo=Double.parseDouble(data[1]);
-                            int al=(int) (Double.parseDouble(data[3])/3.280839895);
-                            long ts=MapPoint.winTime2JavaTime(Double.parseDouble(data[4]));
-                            pt=new MapPoint(la, lo, al, ts, null);
+                            MapPoint pt = createOziTrackPoint(data);
                             route.addMapPointFromTrackLoad(pt);
 
                         } catch (Exception e) {
@@ -364,6 +354,14 @@ public abstract class MapRouteLoader implements Runnable, ProgressStoppable {
                 // s = MapUtil.emptyString;
             }
         } while ((i!=-1));
+    }
+
+    private static MapPoint createOziTrackPoint(String[] data) {
+        double la=Double.parseDouble(data[0]);
+        double lo=Double.parseDouble(data[1]);
+        int al=(int) (Double.parseDouble(data[3])/3.280839895);
+        long ts=MapPoint.winTime2JavaTime(Double.parseDouble(data[4]));
+        return new MapPoint(la, lo, al, ts, null);
     }
 
     public void setProgressResponse(ProgressResponse progressResponse) {
@@ -403,10 +401,10 @@ public abstract class MapRouteLoader implements Runnable, ProgressStoppable {
     }
 
     static int swapOziColor(int oc) {
-        int r=oc&0xFF;
-        int g=oc&0xFF00;
-        int b=oc&0xFF0000;
-        return (r<<16)+(g)+(b>>16);
+        int r = oc & 0xFF;
+        int g = oc & 0xFF00;
+        int b = oc & 0xFF0000;
+        return (r << 16) + (g) + (b >> 16);
     }
 
     /**
@@ -777,7 +775,7 @@ public abstract class MapRouteLoader implements Runnable, ProgressStoppable {
                 //#debug
 //#                 parser.require(XmlPullParser.END_TAG, null, null);
             }
-        
+
         //#debug
 //#         parser.require(XmlPullParser.END_TAG, null, waypoint);
         //#debug

@@ -8,6 +8,7 @@
  */
 package misc;
 
+import RPMap.FontUtil;
 import RPMap.MapCanvas;
 import RPMap.MapPoint;
 import RPMap.MapRoute;
@@ -109,7 +110,7 @@ public class SportCanvas extends Canvas implements CommandListener, Runnable, GP
 
     protected void paint(Graphics g) {
 
-        g.setFont(MapUtil.SMALLFONTB);
+        g.setFont(FontUtil.SMALLFONTB);
         int fh=g.getFont().getHeight();
         int dminx=0;
         int dminy=fh;
@@ -167,8 +168,8 @@ public class SportCanvas extends Canvas implements CommandListener, Runnable, GP
             }
 
             g.setColor(backColor);
-            g.fillRect(0, sy, dmaxx, MapUtil.LARGEFONTB.getHeight());
-            g.setFont(MapUtil.LARGEFONTB);
+            g.fillRect(0, sy, dmaxx, FontUtil.LARGEFONTB.getHeight());
+            g.setFont(FontUtil.LARGEFONTB);
             g.setColor(frontColor);
             String cap=PAUSED;
             if (state==STATE_RUNNING){
@@ -181,9 +182,9 @@ public class SportCanvas extends Canvas implements CommandListener, Runnable, GP
             }
 
             g.drawString(cap, dcx, sy, Graphics.HCENTER|Graphics.TOP);
-            sy+=MapUtil.LARGEFONTB.getHeight()+1;
+            sy+= FontUtil.LARGEFONTB.getHeight()+1;
             g.setColor(0xFFFF40);
-            g.setFont(MapUtil.SMALLFONTB);
+            g.setFont(FontUtil.SMALLFONTB);
 
             g.drawString(MapUtil.speedWithNameRound1(lastFourSpeed()), 0, sy, Graphics.LEFT|Graphics.TOP);
             g.drawString(String.valueOf(MapUtil.speedRound1(lastFourTemp(lastFourSpeed())))+minkm, dmaxx, sy, Graphics.RIGHT|Graphics.TOP);

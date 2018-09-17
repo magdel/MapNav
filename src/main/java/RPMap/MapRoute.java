@@ -17,7 +17,6 @@ import java.io.OutputStream;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.TimeZone;
-import java.util.Vector;
 import javax.microedition.lcdui.Font;
 import javax.microedition.lcdui.Graphics;
 import kml.KMLMapPoint;
@@ -144,7 +143,7 @@ public class MapRoute implements Runnable {
         pts.addElement(new GPSPoint(60.0,30.35,5,"Finish"));
         actpts=2;*/
     }
-    private long offsetUTC=MapUtil.diffLoc2UTCmillis;
+    private long offsetUTC= MapUtil.diffLoc2UTCmillis;
 
     public void recalcMapLevelScreen(MapPoint pt) {
         if (pt==null){
@@ -274,28 +273,16 @@ public class MapRoute implements Runnable {
                 }
             }
         }
-        recalcMapLevelScreen(pt);
+        //recalcMapLevelScreen(pt);
         pts.addElement(pt);
     }
 
     /** Adds point to the track */
     public final void addTrackMapPoint(MapPoint pt) {
         pt.kind=MapPoint.TYPE_TRACK;
-//        if (defTrack){
-//            if (pts.size()==DEF_PTS_COUNT){
-//                for (int i=0; i<DEF_PTS_COUNT-1; i++) {
-//                    pts.setElementAt(pts.elementAt(i+1), i);
-//                }
-//                pts.setSize(DEF_PTS_COUNT-1);
-//            }
-//
-//        }
 
         if (maxTrackSpeed<pt.speed){
             maxTrackSpeed=pt.speed;
-            //  if (minTrackSpeed>pt.speed)minTrackSpeed=pt.speed;
-//    recalcMapLevelScreen(pt);
-//    pts.addElement(pt);
         }
         addMapPoint(pt);
     }
@@ -961,7 +948,7 @@ public class MapRoute implements Runnable {
 
 
             Font f=g.getFont();
-            g.setFont(MapUtil.SMALLFONT);
+            g.setFont(FontUtil.SMALLFONT);
             MapCanvas.drawMapString(g, tpi, 0, MapCanvas.dcy+5, Graphics.TOP|Graphics.LEFT);
             g.setFont(f);
 

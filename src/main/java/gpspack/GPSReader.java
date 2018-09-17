@@ -1,6 +1,7 @@
 package gpspack;
 
 import RPMap.FileTrackSend;
+import RPMap.FontUtil;
 import RPMap.MapCanvas;
 import RPMap.MapPoint;
 import RPMap.MapRoute;
@@ -1815,7 +1816,7 @@ public final class GPSReader implements Runnable {
 
     public void drawSats(Graphics g, int fh, int to) {
         g.setColor(0xFFFF00);
-        g.setFont(MapUtil.SMALLFONT);
+        g.setFont(FontUtil.SMALLFONT);
         int cd, fhl=g.getFont().getHeight();
         if ((MapCanvas.dmaxx+fhl+to)<(MapCanvas.dmaxy)){
             cd=(int) ((MapCanvas.dmaxx)/1.05);

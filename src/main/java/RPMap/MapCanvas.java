@@ -1333,7 +1333,7 @@ public final class MapCanvas extends Canvas implements GeneralFeedback, CommandL
     g.fillRect(dminx, dminy, dmaxx, dmaxy);
     g.setColor(0xFFFFFF);
     
-    g.setFont(MapUtil.SMALLFONTB);
+    g.setFont(FontUtil.SMALLFONTB);
     int fh = g.getFont().getHeight();
     g.drawString("Exiting...",0,0,Graphics.TOP|Graphics.LEFT);
     if (exitProgress>1)
@@ -1550,7 +1550,7 @@ public final class MapCanvas extends Canvas implements GeneralFeedback, CommandL
       setDrawSizes(landMode);
     }
     
-    int fh = MapUtil.MEDIUMFONT.getHeight();
+    int fh = FontUtil.MEDIUMFONT.getHeight();
     if ((mode==MAPMODE)&&(hasPointer)&&(pointerActive)) {
       int bs = fh*5/3;
       scaleBoxYP=bs*2;
@@ -1607,8 +1607,8 @@ public final class MapCanvas extends Canvas implements GeneralFeedback, CommandL
       }
     
     if (gpsMTT!=null) {
-      g.setFont(MapUtil.MEDIUMFONT);
-      fh=MapUtil.MEDIUMFONT.getHeight();
+      g.setFont(FontUtil.MEDIUMFONT);
+      fh= FontUtil.MEDIUMFONT.getHeight();
       g.setColor(0);
       g.fillRect(0,dcy-fh-fh-fh-fh,dmaxx,fh+fh);
       g.setColor(0xFF3020);
@@ -1671,33 +1671,33 @@ public final class MapCanvas extends Canvas implements GeneralFeedback, CommandL
       g.setColor(0x000000);
       g.fillRect(dminx, dminy, dmaxx, dmaxy);
       
-      Font stdFont=null,smallFont=MapUtil.SMALLFONT;
-      if (splitMode>0) stdFont = MapUtil.SMALLFONT;
+      Font stdFont=null,smallFont= FontUtil.SMALLFONT;
+      if (splitMode>0) stdFont = FontUtil.SMALLFONT;
       else
         if ((mode==SPEEDMODE)||(mode==POSITIONMODE)) {
-        stdFont = MapUtil.LARGEFONTB;
+        stdFont = FontUtil.LARGEFONTB;
         } else
           if (mode==NAVMODE||(mode==STATMODE)){
 
-        stdFont = MapUtil.MEDIUMFONT;
+        stdFont = FontUtil.MEDIUMFONT;
           } else
             if (RMSOption.fontSize==0) {
         if (RMSOption.fontStyle==1) {
-          stdFont = MapUtil.LARGEFONTB;
+          stdFont = FontUtil.LARGEFONTB;
         } else {
-          stdFont = MapUtil.LARGEFONT;
+          stdFont = FontUtil.LARGEFONT;
         }
             } else if (RMSOption.fontSize==2) {
         if (RMSOption.fontStyle==1) {
-          stdFont = MapUtil.SMALLFONTB;
+          stdFont = FontUtil.SMALLFONTB;
         } else {
-          stdFont = MapUtil.SMALLFONT;
+          stdFont = FontUtil.SMALLFONT;
         }
             } else  {
         if (RMSOption.fontStyle==1) {
-          stdFont = MapUtil.MEDIUMFONTB;
+          stdFont = FontUtil.MEDIUMFONTB;
         } else {
-          stdFont = MapUtil.MEDIUMFONT;
+          stdFont = FontUtil.MEDIUMFONT;
         }
             }
       
@@ -2059,8 +2059,8 @@ public final class MapCanvas extends Canvas implements GeneralFeedback, CommandL
               if ((navMode==NAVFULLMODE)||(navMode==NAVHSIMODE)) {
                 g.setColor(COLOR_HSI_ROUTE_DIRECTION);
                 if (dmaxx<150)
-                  g.setFont(MapUtil.SMALLFONT);
-                else g.setFont(MapUtil.MEDIUMFONTB);
+                  g.setFont(FontUtil.SMALLFONT);
+                else g.setFont(FontUtil.MEDIUMFONTB);
                 sr1=(int)(c2r*MapUtil.R2G);
                 if (sr1>360) sr1-=360;
                 if (sr1<0) sr1+=360;
@@ -2081,8 +2081,8 @@ public final class MapCanvas extends Canvas implements GeneralFeedback, CommandL
             }
           
           Font bf = g.getFont();
-          g.setFont(MapUtil.SMALLFONT);
-          fh=MapUtil.SMALLFONT.getHeight();
+          g.setFont(FontUtil.SMALLFONT);
+          fh= FontUtil.SMALLFONT.getHeight();
           
           try{
             
@@ -2724,7 +2724,7 @@ public final class MapCanvas extends Canvas implements GeneralFeedback, CommandL
               String s4=activeRoute.activeETA(activeRoute.distLeft2Nav(dist),true);
             g.setColor(0x20FFA0);
             Font baseF = g.getFont();
-            g.setFont(MapUtil.SMALLFONT);
+            g.setFont(FontUtil.SMALLFONT);
   g.drawString(s4, dmaxx, dmaxy, Graphics.BOTTOM|Graphics.RIGHT );
               g.drawString(s3, dmaxx, dmaxy-fh-fh, Graphics.BOTTOM|Graphics.RIGHT );
               g.drawString(s2, dmaxx, dmaxy-fh, Graphics.BOTTOM|Graphics.RIGHT );
@@ -3526,8 +3526,8 @@ public final class MapCanvas extends Canvas implements GeneralFeedback, CommandL
 //#             tracePos=2.44;
             if (RMSOption.getByteOpt(RMSOption.BO_SCALETYPE)!=0) {
               Font wasF = g.getFont();
-              g.setFont(MapUtil.SMALLFONT);
-              int fhs = MapUtil.SMALLFONT.getHeight()/2;
+              g.setFont(FontUtil.SMALLFONT);
+              int fhs = FontUtil.SMALLFONT.getHeight()/2;
 //#debug
 //#               tracePos=2.441;
               if ((dmaxx-dminx<160)||(RMSOption.getByteOpt(RMSOption.BO_SCALETYPE)==RMSOption.SCALE_LINES))
@@ -4524,7 +4524,7 @@ public final class MapCanvas extends Canvas implements GeneralFeedback, CommandL
         usersPresent=true;
         //nru = (NetRadarUser)users.nextElement();
         nru = (NetRadarUser)nv.elementAt(i);
-        Font fn=MapUtil.SMALLFONT;
+        Font fn= FontUtil.SMALLFONT;
         g.setFont(fn);
         try {
           if (RMSOption.getBoolOpt(RMSOption.BL_SHOWTRACKNR)){
@@ -4702,15 +4702,15 @@ public final class MapCanvas extends Canvas implements GeneralFeedback, CommandL
           if (closest.status_v==null)
             if (closest.status!=null) {
             closest.status_v=new MVector();
-            TextCanvas.split(closest.status,closest.status_v,g.getClipWidth(),MapUtil.SMALLFONT);
+            TextCanvas.split(closest.status,closest.status_v,g.getClipWidth(), FontUtil.SMALLFONT);
             }
           if (closest.status_v!=null){
             Font f=g.getFont();
-            g.setFont(MapUtil.SMALLFONT);
+            g.setFont(FontUtil.SMALLFONT);
             g.setColor(RMSOption.foreColor);
             for (int i=0;i<closest.status_v.size();i++) {
               //s=(String)closest.status_v.elementAt(i);
-              drawMapString(g,(String)closest.status_v.elementAt(i),dminx,dminy+(i+1)*MapUtil.SMALLFONT.getHeight(),Graphics.LEFT|Graphics.TOP);
+              drawMapString(g,(String)closest.status_v.elementAt(i),dminx,dminy+(i+1)* FontUtil.SMALLFONT.getHeight(),Graphics.LEFT|Graphics.TOP);
 //              g.drawString(s,dminx,dminy+(i+1)*MapUtil.SMALLFONT.getHeight(),Graphics.LEFT|Graphics.TOP);
             }
             g.setFont(f);
@@ -4739,17 +4739,17 @@ public final class MapCanvas extends Canvas implements GeneralFeedback, CommandL
   public static boolean drawDarkenBack(Graphics g, String s, int x,int y, int anchor){
     boolean drawed=false;
     if (imageLMDarken==null){
-      imageLMDarken=MapUtil.Img_fadeDarken(MapUtil.LARGEFONTB.stringWidth(MapUtil.SH_WEST)*2,MapUtil.LARGEFONTB.getHeight());
-      imageMMDarken=MapUtil.Img_fadeDarken(MapUtil.MEDIUMFONTB.stringWidth(MapUtil.SH_WEST)*2,MapUtil.MEDIUMFONTB.getHeight());
-      imageSMDarken=MapUtil.Img_fadeDarken(MapUtil.SMALLFONTB.stringWidth(MapUtil.SH_WEST)*2,MapUtil.SMALLFONTB.getHeight());
+      imageLMDarken=MapUtil.Img_fadeDarken(FontUtil.LARGEFONTB.stringWidth(MapUtil.SH_WEST)*2, FontUtil.LARGEFONTB.getHeight());
+      imageMMDarken=MapUtil.Img_fadeDarken(FontUtil.MEDIUMFONTB.stringWidth(MapUtil.SH_WEST)*2, FontUtil.MEDIUMFONTB.getHeight());
+      imageSMDarken=MapUtil.Img_fadeDarken(FontUtil.SMALLFONTB.stringWidth(MapUtil.SH_WEST)*2, FontUtil.SMALLFONTB.getHeight());
     }
     Image di=imageLMDarken;
     Font f= g.getFont();
-    if ((f==MapUtil.LARGEFONT)||(f==MapUtil.LARGEFONTB)){
+    if ((f== FontUtil.LARGEFONT)||(f== FontUtil.LARGEFONTB)){
       di=imageLMDarken;
-    } else if ((f==MapUtil.MEDIUMFONT)||(f==MapUtil.MEDIUMFONTB)){
+    } else if ((f== FontUtil.MEDIUMFONT)||(f== FontUtil.MEDIUMFONTB)){
       di=imageMMDarken;
-    } else if ((f==MapUtil.SMALLFONT)||(f==MapUtil.SMALLFONTB)){
+    } else if ((f== FontUtil.SMALLFONT)||(f== FontUtil.SMALLFONTB)){
       di=imageSMDarken;
     }
     int sw=f.stringWidth(s);

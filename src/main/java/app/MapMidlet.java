@@ -5,6 +5,7 @@
 
 package app;
 
+import RPMap.FontUtil;
 import RPMap.MapCanvas;
 import RPMap.MapUtil;
 import RPMap.RMSOption;
@@ -254,8 +255,8 @@ public class MapMidlet extends MIDlet {
                 g.setColor(0x0);
                 g.fillRect(dminx, dminy, dmaxx, dmaxy);
 
-                g.setFont(MapUtil.LARGEFONTB);
-                int fh = MapUtil.LARGEFONTB.getHeight();
+                g.setFont(FontUtil.LARGEFONTB);
+                int fh = FontUtil.LARGEFONTB.getHeight();
 
                 try {
                     coursradPaint += -0.03127;
