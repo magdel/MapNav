@@ -42,6 +42,21 @@ To compile and run in emulator or device:
 * WTK 2.5, CLDC-1.1, MIDP-2.0 device profile, with extra libs (may be found in /WTK).
 * IDE supporting JavaME development: Netbeans 7 is great for that, just add custom user device with extra libs and name mapping some device in emulator. Netbeans project is ready in /nb
 
+How to:
+1. Open in Netbeans project in ./nb
+2. Some warnings may occur because of platform absense, it's OK
+3. Copy files from ./WTK/lib to C:/WTK25/lib (in lib dir of your current WTK installation)
+4. Open project Propeties, Platform, Manage emulators..
+5. Select Add platform, custom user emulator MIDP JavaME platform
+6. Select platform home dir (C:/WTK25)
+7. Set Platform name to CustomDeviceRun, set Device name to DefaultColorPhone
+8. Clear list of initials libraries. Add all files from C:\WTK25\lib
+9. Add javadocs pathes: C:\WTK25\docs\api\midp, C:\WTK25\docs\api\jsr082 and other similars
+10. Press ready, select the platform and press OK.
+11. Just Run app in Netbeans! (press F6)
+
+
+
 To run unit tests:
 * Open Maven project in your favorite IDE (like Intellij IDEA)
 * Execute unit tests you need
