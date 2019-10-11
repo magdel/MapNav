@@ -6,7 +6,7 @@ J2ME GPS navigation in mobile phone
 [![codecov](https://codecov.io/gh/magdel/MapNav/branch/master/graph/badge.svg)](https://codecov.io/gh/magdel/MapNav)
 [![codebeat badge](https://codebeat.co/badges/0ffbfbf4-bbeb-480a-a6e1-45eac3b06724)](https://codebeat.co/projects/github-com-magdel-mapnav-master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
+[![Hits-of-Code](https://hitsofcode.com/github/magdel/mapnav)](https://hitsofcode.com/view/github/magdel/mapnav)
 ## Mobile navigation with J2ME-enabled phone
 
 
