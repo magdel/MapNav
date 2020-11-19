@@ -39,6 +39,7 @@ J2ME GPS navigation in mobile phone
 ## How to develop
 
 To compile and run in emulator or device:
+* JDK 1.8
 * WTK 2.5, CLDC-1.1, MIDP-2.0 device profile, with extra libs (may be found in /WTK).
 * IDE supporting JavaME development: Netbeans 7 is great for that, just add custom user device with extra libs and name mapping some device in emulator. Netbeans project is ready in /nb
 
@@ -59,5 +60,6 @@ How to:
 
 To run unit tests:
 * Open Maven project in your favorite IDE (like Intellij IDEA)
+* Set JDK 1.8 for project
 * Execute unit tests you need
 
