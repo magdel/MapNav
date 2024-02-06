@@ -11,7 +11,7 @@ J2ME GPS navigation in mobile phone
 ## Mobile navigation with J2ME-enabled phone
 
 
-### Map direction rotatio, track record
+### Map rotation, track record
 
 [![Base map with rotation](https://raw.githubusercontent.com/magdel/MapNav/master/docs/img/maprot.gif)]
 
