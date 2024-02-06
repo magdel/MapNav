@@ -1,6 +1,7 @@
 # MapNav
 J2ME GPS navigation in mobile phone
 
+[![Java CI with Maven](https://github.com/magdel/MapNav/actions/workflows/maven.yml/badge.svg)](https://github.com/magdel/MapNav/actions/workflows/maven.yml)
 [![Travis CI](https://travis-ci.org/magdel/MapNav.svg?branch=master)](https://travis-ci.org/magdel/MapNav)
 [![Test Coverage](https://img.shields.io/codecov/c/github/magdel/MapNav.svg)](https://codecov.io/github/magdel/MapNav?branch=master)
 [![codecov](https://codecov.io/gh/magdel/MapNav/branch/master/graph/badge.svg)](https://codecov.io/gh/magdel/MapNav)
